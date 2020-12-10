@@ -1,0 +1,33 @@
+{
+  "name": "fardtjanst_projekt",
+  "version": "1.0.0",
+  "description": "project fardtjanst",
+  "main": "gulpfile.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "UX",
+    "UI",
+    "gulp",
+    "JS",
+    "SCSS",
+    "HTML"
+  ],
+  "author": "Sandra Andersson",
+  "license": "ISC",
+  "dependencies": {},
+  "devDependencies": {
+    "@babel/core": "^7.12.10",
+    "browser-sync": "^2.26.13",
+    "del": "^6.0.0",
+    "gulp": "^4.0.2",
+    "gulp-babel": "^8.0.0",
+    "gulp-concat": "^2.6.1",
+    "gulp-imagemin": "^7.1.0",
+    "gulp-sass": "^4.1.0",
+    "gulp-sourcemaps": "^3.0.0",
+    "gulp-uglify-es": "^2.0.0",
+    "node-sass": "^5.0.0"
+  }
+}
