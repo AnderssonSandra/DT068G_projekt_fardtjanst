@@ -1,0 +1,94 @@
+#question-container {
+    @include standard-container;
+    padding: 1em 0;
+}
+.question-wrapper {
+    width: 80%;
+    max-width: 1000px;
+    padding: 4em;
+    box-sizing: border-box;
+    border-radius: 20px;
+    margin: 3em auto;
+    background-color: $info-box-green;
+    .question-left {
+        padding: 2em;
+        display: flex;
+        img {
+            width: 30%;
+            height: auto;
+            max-width: 140px;
+        }
+        .question-left-text {
+            width: 70%;
+            padding: 3em 1em 2em 1em;
+        }
+    }
+    .question-right {
+        display: flex;
+        button {
+            flex-grow: 1;
+            @include button;
+            margin: 1.5em 1em;
+        }
+        #question-yes {
+            background-color: $yes-green;
+        }
+        #question-no {
+            background-color: $no-red;
+        }
+    }
+}
+
+@include tablet {
+    .question-wrapper {
+        padding: 3em;
+        .question-left {
+            img {
+                margin-top: 2em;
+                width: 25%;
+                max-width: 90px;
+            }
+            .question-left-text {
+                padding: 2em 1em;
+                width: 75%;
+            }
+        }
+        .question-right {
+            button {
+                margin: 0.5em;
+            }
+        }
+    }
+}
+
+@include phone {
+    .question-wrapper {
+        width: 90%;
+        padding: 0.5em;
+        display: block;
+        .question-left {
+            display: block;
+            img {
+                display: block;
+                width: 60%;
+                max-width: 300px;
+                height: auto;
+                margin: auto;
+            }
+            .question-left-text {
+                padding: 1em 0 0 0;
+                width: 100%;
+            }
+        }
+        .question-right {
+            display: block;
+            button {
+                width: 80%;
+                margin: 0.5em auto;
+                padding: 0.5em;
+            }
+        }
+        
+    }
+
+}

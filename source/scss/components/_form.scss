@@ -1,0 +1,123 @@
+//standard design for forms
+
+form {
+    width: 80%;
+    max-width: 1000px;
+    box-sizing: border-box;
+    margin: 4em auto;
+    input, textarea, select {
+        box-sizing: border-box;
+        padding: 0.8em;
+        border-radius: 25px;
+        width: 100%;
+        margin: 0.5em 0 2em 0;
+    }
+    label, .form-p {
+        font-weight: bold;
+        color: $dark-green;
+    }   
+    .submit {
+        background-color: $button-gren;
+        color: $white;
+        margin-top: 2em;
+    }
+}
+
+.update-button {
+    box-sizing: border-box;
+    display: block;
+    padding: 1em;
+    font-size: 1.3em;
+    border-radius: 25px;
+    width: 80%;
+    max-width: 900px;
+    margin: auto;
+    background-color: $button-gren;
+    color: $white;
+    margin-top: 1em;
+    margin-bottom: 3em;
+}
+
+.checkbox {
+    border: 1px solid;
+    width: 2px;
+    height: 2px;
+    border-radius: 8px;
+    margin: 1em 0 0 1em;
+    display: inline-block;
+}
+
+.radiobox {
+    border: 1px solid;
+    width: 2px;
+    height: 2px;
+    border-radius: 50%;
+    margin: 0.5em 0 0 0.5em;
+    display: inline-block;
+    box-sizing: border-box;
+}
+
+.yes-label {
+    margin-right: 4em;
+    color: $yes-green;
+    margin-left: 1em;
+}
+
+.no-label {
+    color: $no-red;
+    margin-left: 1em;
+}
+
+//uses when label dosent belong have input over
+.special-label {
+    display: block;
+    margin-top: 2em;
+}
+
+.form-p {
+    margin-top: 1.5em;
+}
+
+.checkbox-label {
+    margin-left: 1em;
+    font-weight: normal;
+}
+
+input[type="radio"]:checked, input[type="checkbox"]:checked { 
+    border: 2px solid $black !important;
+    background-color: $dark-green;
+    box-sizing: border-box;
+}
+
+//for checkbox parts in form
+.form-wrapper {
+    width: 100%;
+    box-sizing: border-box;
+    display: flex;
+    .form-card {
+        width: 50%;
+    }
+}
+
+@media (max-width: 970px) {
+    .form-wrapper {
+        display: block;
+        .form-card {
+            width: 100%;
+        }
+    }
+}
+
+@include phone {
+    form {
+        width: 95%;
+        margin-bottom: 1em;
+        margin-top: 2em;
+    }
+
+    .update-button {
+        width: 90%;
+        margin-top: 0;
+        font-size: 1.1em;
+    }
+}

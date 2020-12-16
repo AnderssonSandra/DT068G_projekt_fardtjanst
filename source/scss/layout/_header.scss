@@ -1,0 +1,198 @@
+//Design for header
+header {
+    @include standard-container;
+    margin-bottom: 3em;
+    background-image: url(../images/way.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+//cointener for logo and main nav
+.menu-container {
+    @include standard-container;
+    top: 0;
+    height: 110px;
+    position: relative;
+    background-color: $white;
+    .header-icon {
+        width: 50px;
+        padding-right: 0.5em;
+    }
+    .header-logo {
+        height: 54%;
+        position: absolute;
+        bottom: 0;
+        left: 1%;
+    }
+}
+
+//header background
+.menu-background-container {
+    @include standard-container;
+    position: relative;
+    height: 800px;
+    background: rgba(0, 0, 0, 0.5);
+}
+
+//main navigation
+.menu-list {
+    display: block;
+    float: right;
+    ul {
+        display: flex;
+        margin: auto;
+        padding: 1em 0;
+        box-sizing: border-box;
+        li {
+            flex-grow: 1;
+            text-align: center;
+            text-decoration: none;
+            box-sizing: border-box;
+            display: block;
+            a {
+                text-decoration: none;
+                display: block;
+                //padding: 1em 0;
+            } &:hover {
+                font-weight: bold;
+            }
+            .active {
+                text-decoration: underline;
+            }
+        }
+    }
+}
+
+.menu-text {
+    font-size: 1.2em;
+}
+
+//width for logged out menu
+#menu-list-loggedout {
+    width: 40%;
+}
+
+//width for logged in menu
+#menu-list-loggedin {
+    width: 80%;
+}
+
+//hamburger menu
+/*Navigation*/
+.menu-icon {
+    display: none;
+}
+
+//change menu width
+@media (max-width: 1200px) { 
+    #menu-list-loggedout {
+        width: 50%;
+    }
+
+    #menu-list-loggedin {
+        width: 80%;
+    }
+
+    .menu-container .header-logo {
+        height: 47%;
+    }
+
+    .menu-container .header-icon {
+        width: 29px;
+        padding-right: 0.2em;
+    }
+
+    .menu-text {
+        font-size: 1.1em;
+    }
+
+    .menu-list ul {
+        padding: 2.5em 0;
+    }
+}
+
+//responsive design tablet
+@include tablet {
+
+    .menu-background-container {
+        height: 360px;
+    }
+
+    .menu-container {
+        height: 100px;
+        .header-logo {
+            height: 44%;
+        }
+        .header-icon {
+            width: 35px;
+        }
+    }
+    .menu-icon {
+        width: 100%;
+        position: absolute;
+        text-align: right;
+        top: 0.2em;
+        font-size: 3em;
+        color: #000;
+        z-index: 12;
+        padding-right: 0.5em;
+        box-sizing: border-box;
+        background-color: transparent;
+        border: none;
+        text-decoration: none;
+    }
+
+    #open-menu {
+        display: block;
+    }
+
+    #hamburger-menu-text {
+        font-size: 0.3em;
+        position: absolute;
+        text-align: right;
+        width: 100%;
+        top: 4.5em;
+        text-decoration: underline;
+        padding-right: 1.5em;
+        box-sizing: border-box;
+    }
+
+    .menu-list {
+        display: none;
+        ul {
+            position: fixed;
+            width: 100%;
+            height: 100%;
+            display: block;
+            z-index: 10;
+            background-color: $white;
+            padding-top: 8em;
+            li {
+                width: 100%;
+                text-align: left;
+            }
+            a {
+                padding: 1.8em;
+                border-top: 2px solid rgb(194, 192, 192);
+            }
+        }
+    }
+
+    #menu-list-loggedin {
+        width: 100%;
+    }
+
+    #menu-list-loggedout {
+        width: 100%;
+    }
+}
+
+//responsive design for phone
+@include phone {
+
+    .menu-background-container {
+        height: 260px;
+    }
+}
+

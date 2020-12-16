@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="sv">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Färdtjänsthjälpen</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Inria+Serif&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!--header-->
+    <header class="header" id="header-loggedout">
+        <div class="menu-container">
+            <a href="index.html"><img class="header-logo" src="images/logo_black.png" alt="Logotyp. Logotypen är en buss med texten Färdtjänst på."></a>
+            <nav class="menu-list" id="menu-list-loggedout">
+                <ul>
+                    <li><a class="menu-text" href="index.html"><img class="header-icon" src="images/icon_info.png" alt="Ikon på en cirkel med bokstaven i i. Den ska symbolisera en ikon för information.">Färdtjänst</a></li>
+                    <li><a class="menu-text active" href="login.html"><img class="header-icon" src="images/icon-user.png" alt="Ikon på en gubbe för att symbolisera en användare">Logga in</a></li>
+                </ul>
+            </nav>
+            <!-- hamburgermenu -->
+            <div>
+                <a href="javascript:void(0)" class="menu-icon" id="open-menu" onclick="LoggedOutNav()">&#9776;</a>
+                <a href="javascript:void(0)" class="menu-icon" id="close-menu" onclick="LoggedOutNav()">&times;</a>
+            </div>
+        </div>
+        <div class="menu-background-container">
+            <h1>Logga in</h1>
+        </div>
+    </header>
+    <!--Content-->
+    <section class="container">
+        <!--här kommer innehåll-->
+        <article class="introduction-container">
+            <!--info-div-->
+            <div class="info-wrapper" id="info-wrapper">
+                <img src="images/icon_info.png" alt="Ikon som föreställer en rund cirkel med ett i inuti">
+                <div class="info-text">
+                    <p>Du måste logga in för att boka och hantera dina resor. Du behöver ha ett kundnummer för färdtjänst för att kunna skapa ett konto. Om du är osäker hur du går tillväga kan du läsa Färdtjänstguiden <a href="index.html#guide-container">här</a>.</p>
+                </div>
+            </div>
+        </article>
+        <article class="login-container">
+            <h2>Logga in</h2>
+            <form id="login-form" action="">
+                <label for="personId">Personnummer:</label><br>
+                <input type="text" id="personId" name="personId" placeholder="Skriv in ditt personnummer här"><br>
+                <label for="password">Lösenord:</label><br>
+                <input type="text" id="password" name="password" placeholder="Skriv in ditt lösenord här"><br>
+                <label id="ckeckboxLabel" for="saveAccount">Klicka i rutan för att spara dina inloggningsuppgifter:</label>
+                <input type="checkbox" class="checkbox" name="saveAccount">
+                <input class="submit" id="login-submit" type="submit" value="Logga in">
+            </form>
+            <button data-modal-target="#register-popup" id="register-button">Har du inget konto? Skapa ett nytt konto här</button>
+            <!--Popup div for show register popup-->
+            <div id="popup-container">
+                <div class="popup" id="register-popup">
+                    <h2>Registrera konto</h2>
+                    <form id="register-form" action="">
+                        <label for="register-personId">Personnummer:</label><br>
+                        <input type="text" id="register-personId" name="register-personId" placeholder="Skriv in ditt personnummer här"><br>
+                        <label for="register-customerId">Kundnummer för färdtjänst:</label><br>
+                        <input type="text" id="register-customerId" name="register-customerId" placeholder="Skriv in ditt kundnummer här"><br>
+                        <label for="register-phone">Hem eller mobilnummer:</label><br>
+                        <input type="text" id="register-phone" name="register-phone" placeholder="Skriv in ditt nummer här"><br>
+                        <label for="register-password">Lösenord:</label><br>
+                        <input type="text" id="register-password" name="register-password" placeholder="Skriv in ditt lösenord här"><br>
+                        <label for="register-confirm-password">Bekräfta lösenord:</label><br>
+                        <input type="text" id="register-confirm-password" name="register-confirm-password" placeholder="Bekfräfta lösenord"><br>
+                        <input class="submit" id="register-submit" type="submit" placeholder="Registrera konto">
+                    </form>
+                    <button data-close-button class="close-button">Vill du inte registrera ett konto längre? Klicka här</button>
+                </div>
+            </div>
+        </article>
+    </section>
+    <!--Footer-->
+    <footer id="footer">
+        <!--Footer top part-->
+        <div class="footer-top">
+            <!--Footer- left box-->
+            <div class="footer-box" id="footer-left">
+                <h2 class="footer-heading">Länkar till sidor om färdtjänst:</h2>
+                <ul>
+                    <li><a class="footer-a" target="blank" href="https://www.1177.se/Orebrolan/sa-fungerar-varden/sjukresor-och-fardtjanst/fardtjanst/">1177 - Information om färdtjänst</a></li>
+                    <li><a class="footer-a" target="blank" href="https://e-tjanster.1177.se/mvk/login/login.xhtml">1177 - Ansök om färdtjänst</a> </li>
+                    <li><a class="footer-a" target="blank" href="https://www.riksdagen.se/sv/dokument-lagar/dokument/svensk-forfattningssamling/lag-1997736-om-fardtjanst_sfs-1997-736">Lagen om färdtjänst</a></li>
+                    <li><a class="footer-a" target="blank" href="https://www.riksdagen.se/sv/dokument-lagar/dokument/svensk-forfattningssamling/lag-1997735-om-riksfardtjanst_sfs-1997-735">Lagen om riksfärdtjänst</a></li>
+                    <li><a class="footer-a" target="blank" href="https://www.lanstrafiken.se/serviceresor/fardtjanst-och-riksfardtjanst/fardtjanst/">Örebro kommun - blanketter</a></li>
+                </ul>
+            </div>
+            <!--Footer- right box-->
+            <div class="footer-box" id="footer-right">
+                <h2 class="footer-heading">Om webbsidan:</h2>
+                <a class="footer-a" href="availability.html">Läs om hur vi tänker kring tillgänglighet</a> 
+                <h2 class="footer-heading">Kontakta oss:</h2>
+                <a class="footer-a" href="mailto:mail@mail.se"><img class="footer-icon" src="images/icon_mail_white.png" alt="Ikon som liknar brev">Klicka här för att maila oss</a> 
+                <a class="footer-a" href=""><img class="footer-icon" src="images/icon_phone_white.png" alt="Ikon som liknar en telefon">072-160 66 08</a> 
+                <h2 class="footer-heading">Hittade du det du söker efter?</h2>
+                <img src="images/icon_search_white.png" alt="ikon som visar ett förstoringsglas">
+                <input class="footer-search" type="text" placeholder="Sök här">
+            </div>
+        </div>
+        <!--Footer-bottom part-->
+        <div class="footer-bottom">
+            <img class="footer-logo" src="images/logo_white.png" alt="Logotyp. Logotypen är vit och föreställer en buss med texten färdtjänsthjälpen på">
+            <p>Copywrite 2020  | Färdtjänsthjälpen AB</p>
+        </div>
+    </footer>
+    <!--overlay for popups-->
+    <div id="overlay"></div>
+</body>
+<!--scripts-->
+<script src="js/main.js"></script>
+</html>

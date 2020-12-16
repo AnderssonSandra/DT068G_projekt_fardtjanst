@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="sv">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Färdtjänsthjälpen</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Inria+Serif&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!--header-->
+    <header class="header" id="header-loggedout">
+        <div class="menu-container">
+            <a href=""><img class="header-logo" src="images/logo_black.png" alt="Logotyp. Logotypen är en buss med texten Färdtjänst på."></a>
+            <nav class="menu-list" id="menu-list-loggedin">
+                <ul>
+                    <li><a class="menu-text" href="about.html"><img class="header-icon" src="images/icon_info.png" alt="Ikon på en cirkel med bokstaven i i. Den ska symbolisera en ikon för information.">Färdtjänst</a></li>
+                    <li><a class="menu-text" href="book.html"><img class="header-icon" src="images/icon_location.png" alt="Ikon på en en knappnål för att symbolisera en destionation">Boka en resa</a></li>
+                    <li><a class="menu-text" href="mytrips.html"><img class="header-icon" src="images/icon_todo.png" alt="Ikon på en en lista">Mina resor</a></li>
+                    <li><a class="menu-text" href="account.html"><img class="header-icon" src="images/icon-user.png" alt="Ikon på en gubbe för att symbolisera en användare">Mina sidor</a></li>
+                </ul>
+            </nav>
+            <!-- hamburgermenu -->
+            <div>
+                <a href="javascript:void(0)" class="menu-icon" id="open-menu" onclick="LoggedInNav()">&#9776;</a>
+                <a href="javascript:void(0)" class="menu-icon" id="close-menu" onclick="LoggedInNav()">&times;</a>
+            </div>
+        </div>
+        <div class="menu-background-container">
+            <h1>Boka enkelresa</h1>
+        </div>
+    </header>
+    <!--Content-->
+    <section class="container">
+        <!--här kommer innehåll-->
+        <article class="book-trip-container">
+            <h2>Boka enkelresa</h2>
+            <form id="book-single-trip-form" action="">
+                <label for="book-single-trip-from">Från:</label><br>
+                <input type="text" id="book-single-trip-from" name="book-single-trip-from" placeholder="Skriv i upphämtningsplats"><br>
+                
+                <label for="book-single-trip-to">Till:</label><br>
+                <input type="text" id="book-single-trip-to" name="book-single-trip-to" placeholder="Skriv i slutdestination"><br>
+                
+                <label for="book-single-trip-date">Vilket datum vill du åka?</label>
+                <input type="date" id="book-single-trip-date" name="book-single-trip-date">
+
+                <label for="book-single-trip-time">Ange tid du vill vara framme:</label>
+                <input type="time" id="book-single-trip-time" name="book-single-trip-time">
+                
+                <p class="form-p">Bocka i rutorna om fler ska med på resan</p>
+                <input type="checkbox" class="checkbox" id="book-single-trip-traveler" name="book-single-trip-traveler" value="traveler">
+                <label class="checkbox-label" for="book-single-trip-traveler">Medresenär</label><br>
+                <input type="checkbox" class="checkbox" id="book-single-trip-companion" name="book-single-trip-companion" value="companion">
+                <label class="checkbox-label" for="book-single-trip-companion">Ledsagare</label><br>
+                <input type="checkbox" class="checkbox" id="book-single-trip-kids" name="book-single-trip-kids" value="kids">
+                <label class="checkbox-label" for="book-single-trip-kids">Barn</label><br>
+
+                <label class="special-label" for="book-single-trip-passengers">Hur många reser du med?</label><br>
+                <select name="book-single-trip-passengers" id="cars">
+                    <option value="0">Jag reser själv</option>
+                    <option value="1">1 person</option>
+                    <option value="2">2 personer</option>
+                    <option value="3">3 personer</option>
+                    <option value="more">mer än 3 personer</option>
+                </select>
+                    
+                <p class="form-p">Bocka i rutorna för de hjälpmedel du använder:</p>
+                <div class="form-wrapper">
+                    <div class="form-card">
+                        <input type="checkbox" class="checkbox" id="book-single-trip-aid-wheelchair" name="book-single-trip-aid-wheelchair" value="wheelchair">
+                        <label class="checkbox-label" for="book-single-trip-aid-wheelchair">Rullstol</label><br>
+                        <input type="checkbox" class="checkbox" id="book-single-trip-aid-walker" name="book-single-trip-aid-walker" value="walker">
+                        <label class="checkbox-label" for="book-single-trip-aid-walker">Rullator</label><br>
+                        <input type="checkbox" class="checkbox" id="book-single-trip-aid-crutch" name="book-single-trip-aid-crutch" value="crutch">
+                        <label class="checkbox-label" for="book-single-trip-aid-crutch">Käpp/kryckor/stavar</label><br>
+                    </div>
+                    <div>
+                        <input type="checkbox" class="checkbox" id="book-single-trip-aid-dog" name="book-single-trip-aid-dog" value="dog">
+                        <label class="checkbox-label" for="book-single-trip-aid-permobil">Permobil</label><br>
+                        <input type="checkbox" class="checkbox" id="book-single-trip-aid-other" name="book-single-trip-aid-other" value="other">
+                        <label class="checkbox-label" for="book-single-trip-aid-dog">Ledsagarhund</label><br>
+                        <input type="checkbox" class="checkbox" id="book-single-trip-aid-permobil" name="book-single-trip-aid-permobil" value="permobil">
+                        <label class="checkbox-label" for="book-single-trip-aid-other">annat</label><br>
+                    </div>
+                </div>
+                
+            </form>
+            <button class="update-button" data-modal-target="#confirm-single-trip-popup">Boka resa</button>
+        </article>
+    </section>
+    <!--Footer-->
+    <footer id="footer">
+        <!--Footer top part-->
+        <div class="footer-top">
+            <!--Footer- left box-->
+            <div class="footer-box" id="footer-left">
+                <h2 class="footer-heading">Länkar till sidor om färdtjänst:</h2>
+                <ul>
+                    <li><a class="footer-a" target="blank" href="https://www.1177.se/Orebrolan/sa-fungerar-varden/sjukresor-och-fardtjanst/fardtjanst/">1177 - Information om färdtjänst</a></li>
+                    <li><a class="footer-a" target="blank" href="https://e-tjanster.1177.se/mvk/login/login.xhtml">1177 - Ansök om färdtjänst</a> </li>
+                    <li><a class="footer-a" target="blank" href="https://www.riksdagen.se/sv/dokument-lagar/dokument/svensk-forfattningssamling/lag-1997736-om-fardtjanst_sfs-1997-736">Lagen om färdtjänst</a></li>
+                    <li><a class="footer-a" target="blank" href="https://www.riksdagen.se/sv/dokument-lagar/dokument/svensk-forfattningssamling/lag-1997735-om-riksfardtjanst_sfs-1997-735">Lagen om riksfärdtjänst</a></li>
+                    <li><a class="footer-a" target="blank" href="https://www.lanstrafiken.se/serviceresor/fardtjanst-och-riksfardtjanst/fardtjanst/">Örebro kommun - blanketter</a></li>
+                </ul>
+            </div>
+            <!--Footer- right box-->
+            <div class="footer-box" id="footer-right">
+                <h2 class="footer-heading">Om webbsidan:</h2>
+                <a class="footer-a" href="availability.html">Läs om hur vi tänker kring tillgänglighet</a> 
+                <h2 class="footer-heading">Kontakta oss:</h2>
+                <a class="footer-a" href="mailto:mail@mail.se"><img class="footer-icon" src="images/icon_mail_white.png" alt="Ikon som liknar brev">Klicka här för att maila oss</a> 
+                <a class="footer-a" href=""><img class="footer-icon" src="images/icon_phone_white.png" alt="Ikon som liknar en telefon">072-160 66 08</a> 
+                <h2 class="footer-heading">Hittade du det du söker efter?</h2>
+                <img src="images/icon_search_white.png" alt="ikon som visar ett förstoringsglas">
+                <input class="footer-search" type="text" placeholder="Sök här">
+            </div>
+        </div>
+        <!--Footer-bottom part-->
+        <div class="footer-bottom">
+            <img class="footer-logo" src="images/logo_white.png" alt="Logotyp. Logotypen är vit och föreställer en buss med texten färdtjänsthjälpen på">
+            <p>Copywrite 2020  | Färdtjänsthjälpen AB</p>
+        </div>
+    </footer>
+    <!--overlay for popups-->
+    <div id="overlay"></div>
+    <div id="popup-container">
+        <!--popup to confirm popup-->
+        <div class="popup" id="confirm-single-trip-popup">
+            <h2>Stämmer dina uppgifter?</h2>
+            <p  class="dubblecheck-intro-text">Vänligen dubbelkolla att dina uppgifter stämmer och bekräfta sedan resan för att boka.</p>          
+            <p class="dubbelcheck-p"><img src="images/icon_location.png" alt="Ikon som föreställer en destination"><b>Från:</b> Adress</p>
+            <p class="dubbelcheck-p"><img src="images/icon_location.png" alt="Ikon som föreställer en destination"><b>Till:</b> Adress</p>
+            <p class="dubbelcheck-p"><img src="images/icon_calender.png" alt="Ikon som föreställer en kalender"><b>Datum:</b> 20 december 2020</p>
+            <p class="dubbelcheck-p"><img src="images/icon_clock_green.png" alt="Ikon som föreställer en klocka"><b>Tid:</b> Du vill vara framme kl.17</p>
+            <p class="dubbelcheck-p"><img src="images/icon-user.png" alt="Ikon som föreställer en gubbe"><b>Resenärer:</b> Du åker själv</p>
+            <p class="dubbelcheck-p"><img src="images/icon_info.png" alt="Ikon som föreställer en cirkel med ett i i"><b>Hjälpmedel:</b></p>
+            <ul>
+                <li>Rullstol</li>
+                <li>Ledsagarhund</li>
+            </ul>
+            <p class="dubbelcheck-under-text">Du kan förflytta dig till eget säte</p>
+            <p class="dubbelcheck-p"><img src="images/icon_todo.png" alt="Ikon som föreställer en lista"><b>Dina uppgifter:</b></p>
+            <ul>
+                <li>Du klarar av att ta dig till och från bilen själv</li>
+                <li>Du betalar med månadskort</li>
+                <li>Du har inga speciella behov</li>
+            </ul>
+            <button class="update-button" data-modal-target="#confirmed-trip-popup">Boka resa</button>
+            <button data-close-button class="close-button">Blev något fel? Klicka här för att gå tillbaka till bokningen</button>
+        </div>
+        <!--popup when booking is confirmed-->
+        <div class="popup" id="confirmed-trip-popup">
+            <h2>Din resa är bokad</h2>
+            <p class="dubblecheck-intro-text">Du har nu bokat din resa!</p>
+            <a class="choose-booking-link" href="mytrips.html">Se dina bokade resor</a>
+            <a class="choose-booking-link" href="book.html">Boka en ny resa</a>
+            <!--question-div-->
+            <div class="question-wrapper" id="question-wrapper">
+                <div class="question-left">
+                    <img src="images/icon_question.png" alt="Ikon som föreställer en rund cirkel med ett frågetecken i">
+                    <div class="question-left-text">
+                        <p>Hade du en bra upplevelse när du bokade resan?</p>
+                    </div>
+                </div>
+                <div class="question-right">
+                    <button id="question-yes" onclick="changeBox()"> Ja</button>
+                    <button id="question-no" onclick="changeBox()">Nej</button>
+                </div>
+            </div>
+            <!--info-div-->
+            <div class="hidden-info-wrapper" id="hidden-info-wrapper">
+                <img src="images/icon_info.png" alt="Ikon som föreställer en rund cirkel med ett i inuti">
+                <div class="hidden-info-text">
+                    <p>Tack för din feedback!</p>
+                    <a href="availability.html">Gå gärna in och läs om vårat arbete kring tillgänglighet här</a>
+                </div>
+            </div>        
+        </div>
+    </div>
+</body>
+<!--scripts-->
+<script src="js/main.js"></script>
+</html>

@@ -1,0 +1,47 @@
+@mixin standard-container {
+    width: 100%;
+    box-sizing: border-box;
+}
+
+@mixin medium-container {
+    width: 80%;
+    box-sizing: border-box;
+    margin: auto;
+}
+
+@mixin tablet-container {
+    width: 80%;
+    box-sizing: border-box;
+    margin: auto;
+}
+
+@mixin button {
+    padding: 1em;
+    border: 1px solid $dark-green;
+    border-radius: 20px;
+    background-color: $button-gren;
+    color: $white;
+    box-sizing: border-box;
+    font-size: 1.2em;
+    display: block;
+}
+
+@mixin phone-container {
+    width: 90%;
+    box-sizing: border-box;
+    margin: auto;
+}
+
+//Responsive design for tablet
+@mixin tablet {
+    @media (max-width: 850px) { 
+        @content; 
+    }
+}
+
+//Responsive design for phone
+@mixin phone {
+    @media (max-width: 600px) { 
+        @content; 
+    }
+}

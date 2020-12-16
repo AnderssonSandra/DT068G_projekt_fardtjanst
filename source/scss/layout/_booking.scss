@@ -1,0 +1,39 @@
+//container for booking sites
+.book-trip-container {
+    @include standard-container;
+    padding: 4em 0;
+}
+
+//container for choose booking sites
+.choose-booking-container {
+    @include standard-container;
+    margin: 5em 0 7em 0;
+}
+
+.choose-booking-link {
+    @include button;
+    text-decoration: none;
+    text-align: center;
+    margin: 1em auto 1em;
+    width: 60%;
+    max-width: 500px;
+}
+
+#form-heading {
+    margin-top: 4em;
+}
+
+@include tablet {
+    .choose-booking-container {
+        margin: 4em 0 5em 0;
+    }
+    .choose-booking-link {
+        width: 50%;
+    }
+}
+
+@include phone {
+    .choose-booking-link {
+        width: 80%;
+    }
+}

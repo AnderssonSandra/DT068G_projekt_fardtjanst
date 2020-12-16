@@ -12,21 +12,23 @@
     <!--header-->
     <header class="header" id="header-loggedout">
         <div class="menu-container">
-            <a href="index.html"><img class="header-logo" src="images/logo_black.png" alt="Logotyp. Logotypen är en buss med texten Färdtjänst på."></a>
-            <nav class="menu-list" id="menu-list-loggedout">
+            <a href=""><img class="header-logo" src="images/logo_black.png" alt="Logotyp. Logotypen är en buss med texten Färdtjänst på."></a>
+            <nav class="menu-list" id="menu-list-loggedin">
                 <ul>
-                    <li><a class="menu-text active" href="index.html"><img class="header-icon" src="images/icon_info.png" alt="Ikon på en cirkel med bokstaven i i. Den ska symbolisera en ikon för information.">Färdtjänst</a></li>
-                    <li><a class="menu-text" href="login.html"><img class="header-icon" src="images/icon-user.png" alt="Ikon på en gubbe för att symbolisera en användare">Logga in</a></li>
+                    <li><a class="menu-text active" href="about.html"><img class="header-icon" src="images/icon_info.png" alt="Ikon på en cirkel med bokstaven i i. Den ska symbolisera en ikon för information.">Färdtjänst</a></li>
+                    <li><a class="menu-text" href="book.html"><img class="header-icon" src="images/icon_location.png" alt="Ikon på en en knappnål för att symbolisera en destionation">Boka en resa</a></li>
+                    <li><a class="menu-text" href="mytrips.html"><img class="header-icon" src="images/icon_todo.png" alt="Ikon på en en lista">Mina resor</a></li>
+                    <li><a class="menu-text" href="account.html"><img class="header-icon" src="images/icon-user.png" alt="Ikon på en gubbe för att symbolisera en användare">Mina sidor</a></li>
                 </ul>
             </nav>
             <!-- hamburgermenu -->
             <div>
-                <a href="javascript:void(0)" class="menu-icon" id="open-menu" onclick="LoggedOutNav()">&#9776;</a>
-                <a href="javascript:void(0)" class="menu-icon" id="close-menu" onclick="LoggedOutNav()">&times;</a>
+                <a href="javascript:void(0)" class="menu-icon" id="open-menu" onclick="LoggedInNav()">&#9776;</a>
+                <a href="javascript:void(0)" class="menu-icon" id="close-menu" onclick="LoggedInNav()">&times;</a>
             </div>
         </div>
         <div class="menu-background-container">
-            <h1>Res med Färdtjänst</h1>
+            <h1>Färdtjänst</h1>
         </div>
     </header>
     <!--Content-->
@@ -74,30 +76,6 @@
                     <h3>Var kan jag resa?</h3>
                     <p>Med färdtjänst kan du resa inom hela Örebro Län. Du kan dessutom resa utanför länet men då är begränsningen 30 km från länsgränsen och resan ska börja eller sluta inom Örebro län. Om resan är längre än så kan du ansöka om riksfärdtjänst via <a href="https://www.lanstrafiken.se/serviceresor/fardtjanst-och-riksfardtjanst/fardtjanst/" target="blank">Örebro Kommuns blanketter</a> alternativt via <a href="https://e-tjanster.1177.se/mvk/login/login.xhtml" target="blank">dina vårdtjänster på 1177</a>.</p>
                 </div>
-            </div>
-        </article>
-        <!--guide-->
-        <article id="guide-container">
-            <h2>Hur går jag tillväga för att använda Färdtjänsthjälpen?</h2>
-            <div id="guide-text-container-wrapper">
-                <h3>Guide för att boka resa med Färdtjänsthjälpen</h3>
-                <div class="guide-text-container">
-                    <p class="guide-text-number">1.</p>
-                    <p class="guide-text-text">Läs på <a href="https://www.1177.se/Orebrolan/sa-fungerar-varden/sjukresor-och-fardtjanst/fardtjanst/" target="blank">Vårdguiden 1177:s hemsida</a> om vad Färdtjänst är, vilka som har rätt att använda det och hur det fungerar.</p>
-                </div>
-                <div class="guide-text-container">
-                    <p class="guide-text-number">2.</p>
-                    <p class="guide-text-text">Ansök om färdtjänst via <a href="https://e-tjanster.1177.se/mvk/login/login.xhtml" target="blank">1177:s e-tjänst</a> alternativt via blanketter som du kan skriva ut hos <a href="https://www.lanstrafiken.se/serviceresor/fardtjanst-och-riksfardtjanst/fardtjanst/" target="blank">länstrafiken för Örebro Län</a>.</p>
-                </div>
-                <div class="guide-text-container">
-                    <p class="guide-text-number">3.</p>
-                    <p class="guide-text-text">Använd ditt personliga kundnummer för att <button data-modal-target="#register-popup" class="button-normal-text">registrera ett konto</button> här på Färdtjänst-hjälpen. </p>
-                </div>
-                <div class="guide-text-container">
-                    <p class="guide-text-number">4.</p>
-                    <p class="guide-text-text"><a href="login.html">Logga in</a> och använd E-tjänsten för att boka och hantera dina resor. </p>
-                </div>
-                <img id="guide-list-icon" src="images/icon_todo.png" alt="En ikon som föreställer en lista">               
             </div>
         </article>
         <!--question-->
@@ -166,15 +144,15 @@
             <h2>Registrera konto</h2>
             <form id="register-form" action="">
                 <label for="register-personId">Personnummer:</label><br>
-                <input type="text" id="register-personId" name="register-personId" placeholder="Skriv in ditt personnummer här"><br>
+                <input type="text" id="register-personId" name="register-personId" value="Skriv in ditt personnummer här"><br>
                 <label for="register-customerId">Kundnummer för färdtjänst:</label><br>
-                <input type="text" id="register-customerId" name="register-customerId" placeholder="Skriv in ditt kundnummer här"><br>
+                <input type="text" id="register-customerId" name="register-customerId" value="Skriv in ditt kundnummer här"><br>
                 <label for="register-phone">Hem eller mobilnummer:</label><br>
-                <input type="text" id="register-phone" name="register-phone" placeholder="Skriv in ditt nummer här"><br>
+                <input type="text" id="register-phone" name="register-phone" value="Skriv in ditt nummer här"><br>
                 <label for="register-password">Lösenord:</label><br>
-                <input type="text" id="register-password" name="register-password" placeholder="Skriv in ditt lösenord här"><br>
+                <input type="text" id="register-password" name="register-password" value="Skriv in ditt lösenord här"><br>
                 <label for="register-confirm-password">Bekräfta lösenord:</label><br>
-                <input type="text" id="register-confirm-password" name="register-confirm-password" placeholder="Bekfräfta lösenord"><br>
+                <input type="text" id="register-confirm-password" name="register-confirm-password" value="Bekfräfta lösenord"><br>
                 <input class="submit" id="register-submit" type="submit" value="Registrera konto">
             </form>
             <button data-close-button class="close-button">Vill du inte registrera ett konto längre? Klicka här</button>

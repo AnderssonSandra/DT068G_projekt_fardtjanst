@@ -1,0 +1,58 @@
+.hidden-info-wrapper {
+    width: 80%;
+    max-width: 1000px;
+    padding: 4em;
+    box-sizing: border-box;
+    border-radius: 20px;
+    margin: 3em auto;
+    background-color: $info-box-green;
+    display: none;
+    img {
+        width: 20%;
+        height: auto;
+        max-width: 140px;
+    }
+    .hidden-info-text {
+        width: 80%;
+        padding: 3em 1em 2em 1em;
+    } 
+}
+
+
+@include tablet {
+    .hidden-info-wrapper {
+        padding: 3em;
+        img {
+            margin-top: 2em;
+            width: 25%;
+            max-width: 90px;
+        }
+        .hidden-info-text {
+            padding: 2em 1em;
+            width: 75%;
+        }
+    }
+}
+
+
+
+@include phone {
+    .hidden-info-wrapper {
+        width: 90%;
+        padding: 0.5em;
+        display: block;
+        img {
+            display: block;
+            width: 60%;
+            max-width: 300px;
+            height: auto;
+            margin: auto;
+        }
+        .hidden-info-text {
+            padding: 1em 0 0 0;
+            width: 100%;
+        }
+    }
+}
+
+

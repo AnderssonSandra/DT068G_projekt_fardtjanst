@@ -1,0 +1,8 @@
+.container {
+    @include standard-container;
+}
+
+.info-box-container {
+    @include standard-container;
+    margin: 8em 0;
+}
