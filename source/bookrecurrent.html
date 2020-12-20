@@ -12,8 +12,13 @@
     <!--header-->
     <header class="header" id="header-loggedout">
         <div class="menu-container">
-            <a href=""><img class="header-logo" src="images/logo_black.png" alt="Logotyp. Logotypen är en buss med texten Färdtjänst på."></a>
-            <nav class="menu-list" id="menu-list-loggedin">
+            <a href="about.html" aria-label="Klickar du på logotypen hamnar du på startsidan som innehåller information om färdtjänst"><img class="header-logo" src="images/logo_black.png" alt="Logotyp. Logotypen är en buss med texten Färdtjänst på."></a>
+            <!-- hamburgermenu -->
+            <div>
+                <button class="menu-icon" id="open-menu" aria-label="Öppna meny" aria-expanded="false" aria-controls="menu-list-loggedin" aria-haspopup="true" onclick="LoggedInNav()">&#9776;</button>
+                <button class="menu-icon" id="close-menu" aria-label="Stäng meny" onclick="LoggedInNav()">&times;</button>
+            </div>
+            <nav class="menu-list" id="menu-list-loggedin" aria-label="huvudmeny">
                 <ul>
                     <li><a class="menu-text" href="about.html"><img class="header-icon" src="images/icon_info.png" alt="Ikon på en cirkel med bokstaven i i. Den ska symbolisera en ikon för information.">Färdtjänst</a></li>
                     <li><a class="menu-text" href="book.html"><img class="header-icon" src="images/icon_location.png" alt="Ikon på en en knappnål för att symbolisera en destionation">Boka en resa</a></li>
@@ -21,28 +26,23 @@
                     <li><a class="menu-text" href="account.html"><img class="header-icon" src="images/icon-user.png" alt="Ikon på en gubbe för att symbolisera en användare">Mina sidor</a></li>
                 </ul>
             </nav>
-            <!-- hamburgermenu -->
-            <div>
-                <a href="javascript:void(0)" class="menu-icon" id="open-menu" onclick="LoggedInNav()">&#9776;</a>
-                <a href="javascript:void(0)" class="menu-icon" id="close-menu" onclick="LoggedInNav()">&times;</a>
-            </div>
         </div>
         <div class="menu-background-container">
             <h1>Boka återkommande resa</h1>
         </div>
     </header>
     <!--Content-->
-    <section class="container">
+    <main class="container">
         <!--här kommer innehåll-->
-        <article class="book-trip-container">
+        <section class="book-trip-container">
             <h2>Boka återkommande resa</h2>
-            <form id="form" action="confirmRecurrentTrip.html">
+            <form aria-label="formulär för att boka återkomamnde resa" id="form" action="confirmRecurrentTrip.html">
                 <h3>Ange mellan vilka adresser du vill boka din återkommande resa:</h3>
                 <label for="from">Från:</label><br>
-                <input type="text" id="from" name="from" placeholder="Skriv i upphämtningsplats"><br>
+                <input type="text" autocomplete="on" id="from" name="from" placeholder="Skriv i upphämtningsplats"><br>
                 
                 <label for="to">Till:</label><br>
-                <input type="text" id="to" name="to" placeholder="Skriv i slutdestination"><br>
+                <input type="text" autocomplete="on" id="to" name="to" placeholder="Skriv i slutdestination"><br>
                 
                 <h3>Ange mellan vilka datum du vill att din återkommande resa ska gälla:</h3>
                 <label for="from-date">Från:</label><br>
@@ -104,8 +104,8 @@
                 </div>
                 <input type="submit" class="update-button" value="Boka Resa">
             </form>
-        </article>
-    </section>
+        </section>
+    </main>
     <!--Footer-->
     <footer id="footer">
         <!--Footer top part-->
@@ -127,9 +127,9 @@
                 <a class="footer-a" href="availability.html">Läs om hur vi tänker kring tillgänglighet</a> 
                 <h2 class="footer-heading">Kontakta oss:</h2>
                 <a class="footer-a" href="mailto:mail@mail.se"><img class="footer-icon" src="images/icon_mail_white.png" alt="Ikon som liknar brev">Klicka här för att maila oss</a> 
-                <a class="footer-a" href=""><img class="footer-icon" src="images/icon_phone_white.png" alt="Ikon som liknar en telefon">072-160 66 08</a> 
+                <p class="footer-a"><img class="footer-icon" src="images/icon_phone_white.png" alt="Ikon som liknar en telefon">072-160 66 08</p> 
                 <h2 class="footer-heading">Hittade du det du söker efter?</h2>
-                <form id="search-form" action="search.html">
+                <form id="search-form" role="search" action="search.html">
                     <input class="footer-search" type="search" placeholder="Sök här">
                     <button class="footer-search-button" type="submit"><img class="footer-search-button-img" src="images/icon_searche.png" alt="ikon som visar ett förstoringsglas"></button>
                 </form>

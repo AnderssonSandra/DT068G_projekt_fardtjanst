@@ -9,11 +9,11 @@
 <link href="https://fonts.googleapis.com/css2?family=Inria+Serif&display=swap" rel="stylesheet">
 </head>
 <body>
-    <section class="popup-container">
+    <main class="popup-container">
         <!--Popup div for travel info update popup-->
-        <article class="update-form-wrapper" id="travel-info-update">
+        <section class="update-form-wrapper" id="travel-info-update">
             <h2>Uppdatera dina uppgifter</h2>
-            <form id="travel-info-update-form" action="confirmedUpdatedInfo.html">
+            <form aria-label="formulär för att uppdatera reseuppgifter" id="travel-info-update-form" action="confirmedUpdatedInfo.html">
                 <p class="form-p">Bocka i rutorna för den/de funktionsnedsätningarna du har</p>
                 <div class="form-wrapper">
                     <div class="form-card">
@@ -89,8 +89,8 @@
                 <input class="submit" id="travel-info-update-submit" type="submit" value="Uppdatera dina uppgifter">
             </form>
             <a class="go-back-link" href="javascript:history.back()">Vill du inte uppdatera längre? Klicka här för att gå tillbaka</a>
-        </article>
-    </section>
+        </section>
+    </main>
     <!--scripts-->
     <script src="js/main.js"></script>    
 </body>

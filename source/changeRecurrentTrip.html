@@ -9,16 +9,16 @@
 <link href="https://fonts.googleapis.com/css2?family=Inria+Serif&display=swap" rel="stylesheet">
 </head>
 <body>
-    <section class="popup-container">
-        <h2>Ändra din resa</h2>
-        <article class="change-trip">
-            <form id="form" action="confirmRecurrentTrip.html">
+    <main class="popup-container">
+        <section class="change-trip">
+            <h2>Ändra din resa</h2>
+            <form aria-label="formulär för att redigera återkommande resa" id="form" action="confirmRecurrentTrip.html">
                 <h3>Ange mellan vilka adresser du vill boka din återkommande resa:</h3>
                 <label for="from">Från:</label><br>
-                <input value="Restalundvägen 2" type="text" id="from" name="from" placeholder="Skriv i upphämtningsplats"><br>
+                <input value="Restalundvägen 2" type="text" id="from" name="from" autocomplete="on" placeholder="Skriv i upphämtningsplats"><br>
                 
                 <label for="to">Till:</label><br>
-                <input value="Drottninggatan 3" type="text" id="to" name="to" placeholder="Skriv i slutdestination"><br>
+                <input value="Drottninggatan 3" type="text" id="to" name="to" autocomplete="on" placeholder="Skriv i slutdestination"><br>
                 
                 <h3>Ange mellan vilka datum du vill att din återkommande resa ska gälla:</h3>
                 <label for="from-date">Från:</label><br>
@@ -106,11 +106,11 @@
                     <!--add questions depended on choise of aid-->
                 </div>
             </form>
-            <a href="confirmupdate.html" class="update-button" id="update-trip">Uppdatera resa</a>
+            <a href="confirmUpdate.html" class="update-button" id="update-trip">Uppdatera resa</a>
             <a href="confirmDelete.html" class="update-button" id="delete-trip">Avboka resan</a>
             <a class="go-back-link" href="javascript:history.back()">Vill du inte ändra din resa? Klicka här för att gå tillbaka</a>
-        </article>
-    </section>    
+        </section>
+    </main>    
     <!--scripts-->
     <script src="js/main.js"></script>
 </body>

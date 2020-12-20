@@ -13,45 +13,45 @@
     <header class="header" id="header-loggedout">
         <div class="menu-container">
             <a href="index.html"><img class="header-logo" src="images/logo_black.png" alt="Logotyp. Logotypen är en buss med texten Färdtjänst på."></a>
-            <nav class="menu-list" id="menu-list-loggedout">
+            <!-- hamburgermenu -->
+            <div>
+                <button class="menu-icon" id="open-menu" aria-label="Öppna meny" aria-expanded="false" aria-controls="menu-list-loggedout" aria-haspopup="true" onclick="LoggedOutNav()">&#9776;</button>
+                <button class="menu-icon" id="close-menu" aria-label="Stäng meny" onclick="LoggedOutNav()">&times;</button>
+            </div>
+            <nav class="menu-list" id="menu-list-loggedout" aria-label="huvudmeny">
                 <ul>
                     <li><a class="menu-text" href="index.html"><img class="header-icon" src="images/icon_info.png" alt="Ikon på en cirkel med bokstaven i i. Den ska symbolisera en ikon för information.">Färdtjänst</a></li>
                     <li><a class="menu-text" href="login.html"><img class="header-icon" src="images/icon-user.png" alt="Ikon på en gubbe för att symbolisera en användare">Logga in</a></li>
                 </ul>
             </nav>
-            <!-- hamburgermenu -->
-            <div>
-                <a href="javascript:void(0)" class="menu-icon" id="open-menu" onclick="LoggedOutNav()">&#9776;</a>
-                <a href="javascript:void(0)" class="menu-icon" id="close-menu" onclick="LoggedOutNav()">&times;</a>
-            </div>
         </div>
         <div class="menu-background-container">
             <h1>Tillgänglighet</h1>
         </div>
     </header>
-    <section class="container">
-        <article class="introduction-container">
+    <main class="container">
+        <section class="introduction-container">
             <p class="introduction-text">Vi på Färdtjänsthjälpen står bakom denna webbsida. Vi vill att så många som möjligt ska kunna använda webbplatsen och därför försöker vi tillgänglighetsgöra sidan. Här kan du läsa om våran redogörelse för hur vi arbetar med tillgänglighet på webbsidan.</p>
-        </article>
+        </section>
         <!--what do we do?-->
-        <article class="availability-container">
+        <section class="availability-container">
             <h2>Hur arbetar vi med tillgänglighet?</h2>
             <div class="availability-wrapper">
-                <div class="availability-card">
+                <article class="availability-card">
                     <h3>Någonting om arbetet</h3>
                     <p>Med färdtjänst kan du resa inom hela Örebro Län. Du kan dessutom resa utanför länet men då är begränsningen 30 km från länsgränsen och resan ska börja eller sluta inom Örebro län. Om resan är längre än så kan du ansöka om riksfärdtjänst via <a href="https://www.lanstrafiken.se/serviceresor/fardtjanst-och-riksfardtjanst/fardtjanst/" target="blank">Örebro Kommuns blanketter</a> alternativt via dina <a href="https://e-tjanster.1177.se/mvk/login/login.xhtml" target="blank">vårdtjänster på 1177</a>.</p>
-                </div>
-                <div class="availability-card">
+                </article>
+                <article class="availability-card">
                     <h3>Mål med tillgängligheten</h3>
                     <p>Med färdtjänst kan du resa inom hela Örebro Län. Du kan dessutom resa utanför länet men då är begränsningen 30 km från länsgränsen och resan ska börja eller sluta inom Örebro län. Om resan är längre än så kan du ansöka om riksfärdtjänst via <a href="https://www.lanstrafiken.se/serviceresor/fardtjanst-och-riksfardtjanst/fardtjanst/" target="blank">Örebro Kommuns blanketter</a> alternativt via dina <a href="https://e-tjanster.1177.se/mvk/login/login.xhtml" target="blank">vårdtjänster på 1177</a>.</p>
-                </div>
+                </article>
             </div>
-        </article>
+        </section>
         <!--what can we do better?-->
-        <article class="availability-container">
+        <section class="availability-container">
             <h2>Vilka brister känner vi till?</h2>
             <div class="availability-wrapper">
-                <div class="availability-card">
+                <article class="availability-card">
                     <h3>Punktlista med brister</h3>
                     <ul>
                         <li>Brist nummer 1 är att vi behöver färbättra bla bla nldksanlksa salnkdansda</li>
@@ -60,8 +60,8 @@
                         <li>Brist nummer 1 är att vi behöver färbättra bla bla nldksanlksa salnkdansda Brist nummer 1 är att vi behöver färbättra bla bla nldksanlksa salnkdansda</li>
                         <li>Brist nummer 1 är att vi behöver färbättra bla bla nldksanlksa salnkdansda</li>
                     </ul>
-                </div>
-                <div class="availability-card">
+                </article>
+                <article class="availability-card">
                     <h3>Hur har vi tänkt åtgärda bristerna?</h3>
                     <ul>
                         <li>Brist nummer 1 är att vi behöver färbättra bla bla nldksanlksa salnkdansda</li>
@@ -70,23 +70,23 @@
                         <li>Brist nummer 1 är att vi behöver färbättra bla bla nldksanlksa salnkdansda Brist nummer 1 är att vi behöver färbättra bla bla nldksanlksa salnkdansda</li>
                         <li>Brist nummer 1 är att vi behöver färbättra bla bla nldksanlksa salnkdansda</li>
                     </ul>
-                </div>
+                </article>
             </div>
-        </article>
-        <article class="availability-container">
+        </section>
+        <section class="availability-container">
             <h2>Hur kan du påverka vårat tillgänlighetsarbete?</h2>
             <div class="availability-wrapper">
-                <div class="availability-card">
+                <article class="availability-card">
                     <h3>Kontakta oss!</h3>
                     <p>Vi vill gärna höra dina åsikter om våran webbsida. Hör gärna av dig till oss och ge feedback om hur din upplevelse av webbsidan har varit. Du kan kontakta oss genom att skicka in ett <a href="feedback.html">formulär</a>, <a href="mailto:mail@mail.se">maila oss</a>, eller ringa oss på 072-160 66 08.</p>
-                </div>
-                <div class="availability-card">
+                </article>
+                <article class="availability-card">
                     <h3>Tillsyn</h3>
                     <p>Myndigheten för digital förvaltning har ansvaret för tillsyn för lagen om tillgänglighet till digital offentlig service. Om du inte är nöjd med hur vi hanterar dina synpunkter kan du kontakta <a href="https://www.digg.se/" target="blank">Myndigheten för digital förvaltning</a> och påtala det.</p>
-                </div>
+                </article>
             </div>
-        </article>
-        <article class="info-box-container">
+        </section>
+        <section class="info-box-container">
             <!--info-div-->
             <div class="info-wrapper" id="info-wrapper">
                 <img src="images/icon_info.png" alt="Ikon som föreställer en rund cirkel med ett i inuti">
@@ -94,8 +94,8 @@
                     <a href="feedback.html">Klicka på mig för att skicka in dina synpunkter på hur du tror att vi kan förbättra webbsidan för att den ska förstås och kunnas användas av alla!</a>
                 </div>
             </div>
-        </article>
-    </section>
+        </section>
+    </main>
     
     <footer id="footer">
         <div class="footer-top">
@@ -114,9 +114,9 @@
                 <a class="footer-a" href="availability.html">Läs om hur vi tänker kring tillgänglighet</a> 
                 <h2 class="footer-heading">Kontakta oss:</h2>
                 <a class="footer-a" href="mailto:mail@mail.se"><img class="footer-icon" src="images/icon_mail_white.png" alt="Ikon som liknar brev">Klicka här för att maila oss</a> 
-                <a class="footer-a" href=""><img class="footer-icon" src="images/icon_phone_white.png" alt="Ikon som liknar en telefon">072-160 66 08</a> 
+                <p class="footer-a"><img class="footer-icon" src="images/icon_phone_white.png" alt="Ikon som liknar en telefon">072-160 66 08</p> 
                 <h2 class="footer-heading">Hittade du det du söker efter?</h2>
-                <form id="search-form" action="search.html">
+                <form id="search-form" role="search" action="search.html">
                     <input class="footer-search" type="search" placeholder="Sök här">
                     <button class="footer-search-button" type="submit"><img class="footer-search-button-img" src="images/icon_searche.png" alt="ikon som visar ett förstoringsglas"></button>
                 </form>
@@ -127,7 +127,6 @@
             <p>Copywrite 2020  | Färdtjänsthjälpen AB</p>
         </div>
     </footer>
+    <script src="js/main.js"></script>
     </body>
-    <script src="js/main.js">
-</script>
 </html>

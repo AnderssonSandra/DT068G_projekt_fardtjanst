@@ -9,6 +9,7 @@
     display: flex;
     border: 1px solid $dark-green;
     border-radius: 79px;
+    margin-bottom: 1em;
     padding: 2em 4em;
     background-color: #6e8d8d14;
     .trip-text {
@@ -85,7 +86,7 @@
     }
     .trip {
         padding: 2em 2em;
-        margin: auto;
+        margin: 0.5em auto;
         .trip-text {
             width: 85%;
         }

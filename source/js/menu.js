@@ -6,10 +6,12 @@ function LoggedOutNav() {
     if (x.style.display === "block") {
     x.style.display = "none";
     closeMenu.style.display = "none";
+    openMenu.setAttribute("aria-expanded", false);
     openMenu.style.display = "block";
     } else {
     x.style.display = "block";
     openMenu.style.display = "none";
+    openMenu.setAttribute("aria-expanded", true);
     closeMenu.style.display = "block";
     }
 }
@@ -21,10 +23,12 @@ function LoggedInNav() {
     if (x.style.display === "block") {
     x.style.display = "none";
     closeMenu.style.display = "none";
+    openMenu.setAttribute("aria-expanded", false);
     openMenu.style.display = "block";
     } else {
     x.style.display = "block";
     openMenu.style.display = "none";
+    openMenu.setAttribute("aria-expanded", true);
     closeMenu.style.display = "block";
     }
 }

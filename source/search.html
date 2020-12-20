@@ -12,55 +12,55 @@
     <!--header-->
     <header class="header" id="header-loggedout">
         <div class="menu-container">
-            <a href="index.html"><img class="header-logo" src="images/logo_black.png" alt="Logotyp. Logotypen är en buss med texten Färdtjänst på."></a>
-            <nav class="menu-list" id="menu-list-loggedout">
+            <a href="index.html" aria-label="Klickar du på logotypen hamnar du på startsidan som innehåller information om färdtjänst"><img class="header-logo" src="images/logo_black.png" alt="Logotyp. Logotypen är en buss med texten Färdtjänst på."></a>
+            <!-- hamburgermenu -->
+            <div>
+                <button class="menu-icon" id="open-menu" aria-label="Öppna meny" aria-expanded="false" aria-controls="menu-list-loggedout" aria-haspopup="true" onclick="LoggedOutNav()">&#9776;</button>
+                <button class="menu-icon" id="close-menu" aria-label="Stäng meny" onclick="LoggedOutNav()">&times;</button>
+            </div>
+            <nav class="menu-list" id="menu-list-loggedout" aria-label="huvudmeny">
                 <ul>
                     <li><a class="menu-text active" href="index.html"><img class="header-icon" src="images/icon_info.png" alt="Ikon på en cirkel med bokstaven i i. Den ska symbolisera en ikon för information.">Färdtjänst</a></li>
                     <li><a class="menu-text" href="login.html"><img class="header-icon" src="images/icon-user.png" alt="Ikon på en gubbe för att symbolisera en användare">Logga in</a></li>
                 </ul>
             </nav>
-            <!-- hamburgermenu -->
-            <div>
-                <a href="javascript:void(0)" class="menu-icon" id="open-menu" onclick="LoggedOutNav()">&#9776;</a>
-                <a href="javascript:void(0)" class="menu-icon" id="close-menu" onclick="LoggedOutNav()">&times;</a>
-            </div>
         </div>
         <div class="menu-background-container">
             <h1>Sök</h1>
         </div>
     </header>
-    <section class="popup-container">
-        <h2>Sök</h2>
-        <article id="search-container">
+    <main class="popup-container">
+        <section id="search-container">
+            <h2>Sök</h2>
             <h3>Gör en ny sökning</h3>
-            <form id="search" action="search.html">
+            <form id="search" role="search" action="search.html">
                 <input id="search-input" type="search" placeholder="Sök här">
                 <button id="search-button" type="submit"><img id="search-button-img" src="images/icon_searche.png" alt="ikon som visar ett förstoringsglas"> Sök </button>
             </form>
             <!--search results-->
             <h3>Ditt sökresultat</h3>
             <p id="search-intro-text"><b>Du sökte efter:</b> sökning</p>
-            <div id="search-wrapper">
-                <div class="search-div">
+            <section id="search-wrapper">
+                <article class="search-div">
                     <a class="search-link" href="mytrips.html">Mina sidor</a>
                     <p>Du sökte på detta efter något som gjorde att du fick upp detta sökresultat.</p>
-                </div>
-                <div class="search-div">
+                </article>
+                <article class="search-div">
                     <a class="search-link" href="about.html">Färdtjänst</a>
                     <p>Du sökte på detta efter något som gjorde att du fick upp detta sökresultat.</p>
-                </div>
-                <div class="search-div">
+                </article>
+                <article class="search-div">
                     <a class="search-link" href="availability.html">Tillgänglighet</a>
                     <p>Du sökte på detta efter något som gjorde att du fick upp detta sökresultat.</p>
-                </div>
-                <div class="search-div">
+                </article>
+                <article class="search-div">
                     <a class="search-link" href="mytrips.html">Mina sidor</a>
                     <p>Du sökte på detta efter något som gjorde att du fick upp detta sökresultat.</p>
-                </div>
-            </div>
-        </article>
+                </article>
+            </section>
+        </section>
         <a href="javascript:document.documentElement.scrollTop = 0" class="go-back-link">Gå tillbaka till början av sidan</a>
-    </section>
+    </main>
     <!--Footer-->
     <footer id="footer">
         <!--Footer top part-->
@@ -82,9 +82,9 @@
                 <a class="footer-a" href="availability.html">Läs om hur vi tänker kring tillgänglighet</a> 
                 <h2 class="footer-heading">Kontakta oss:</h2>
                 <a class="footer-a" href="mailto:mail@mail.se"><img class="footer-icon" src="images/icon_mail_white.png" alt="Ikon som liknar brev">Klicka här för att maila oss</a> 
-                <a class="footer-a" href=""><img class="footer-icon" src="images/icon_phone_white.png" alt="Ikon som liknar en telefon">072-160 66 08</a> 
+                <p class="footer-a"><img class="footer-icon" src="images/icon_phone_white.png" alt="Ikon som liknar en telefon">072-160 66 08</p> 
                 <h2 class="footer-heading">Hittade du det du söker efter?</h2>
-                <form id="search-form" action="search.html">
+                <form id="search-form" role="search" action="search.html">
                     <input class="footer-search" type="search" placeholder="Sök här">
                     <button class="footer-search-button" type="submit"><img class="footer-search-button-img" src="images/icon_searche.png" alt="ikon som visar ett förstoringsglas"></button>
                 </form>

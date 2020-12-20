@@ -9,36 +9,36 @@
 <link href="https://fonts.googleapis.com/css2?family=Inria+Serif&display=swap" rel="stylesheet">
 </head>
 <body>
-    <section class="popup-container">
+    <main class="popup-container">
         <!--when single trip is confirmed-->
-        <article id="confirmed-single-trip-wrapper">
+        <section id="confirmed-single-trip-wrapper">
             <h2>Din resa är bokad</h2>
             <p class="dubblecheck-intro-text">Du har nu bokat din resa!</p>
             <a class="choose-booking-link" href="mytrips.html">Se dina bokade resor</a>
             <a class="choose-booking-link" href="book.html">Boka en ny resa</a>
             <!--question-div-->
-            <div class="question-wrapper" id="question-wrapper">
+            <article class="question-wrapper" id="question-wrapper">
                 <div class="question-left">
                     <img src="images/icon_question.png" alt="Ikon som föreställer en rund cirkel med ett frågetecken i">
                     <div class="question-left-text">
-                        <p>Hade du en bra upplevelse när du bokade resan?</p>
+                        <p id="p-question">Hade du en bra upplevelse när du bokade resan?</p>
                     </div>
                 </div>
                 <div class="question-right">
-                    <button id="question-yes" class="question-yes" onclick="changeBox()"> Ja</button>
-                    <button id="question-no" class="question-no" onclick="changeBox()">Nej</button>
+                    <button aria-labelledby="p-question" id="question-yes" class="question-yes" onclick="changeBox()"> Ja</button>
+                    <button aria-labelledby="p-question" id="question-no" class="question-no" onclick="changeBox()">Nej</button>
                 </div>
-            </div>
+            </article>
             <!--info-div-->
-            <div class="hidden-info-wrapper" id="hidden-info-wrapper">
+            <article class="hidden-info-wrapper" id="hidden-info-wrapper">
                 <img src="images/icon_info.png" alt="Ikon som föreställer en rund cirkel med ett i inuti">
                 <div class="hidden-info-text">
                     <p>Tack för din feedback!</p>
                     <a href="availability.html">Gå gärna in och läs om vårat arbete kring tillgänglighet här</a>
                 </div>
-            </div>        
-        </article>    
-    </section>    
+            </article>        
+        </section>    
+    </main>    
     <!--scripts-->
     <script src="js/main.js"></script>
 </body>

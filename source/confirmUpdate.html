@@ -9,31 +9,31 @@
 <link href="https://fonts.googleapis.com/css2?family=Inria+Serif&display=swap" rel="stylesheet">
 </head>
 <body>
-    <section class="popup-container">
+    <main class="popup-container">
         <!--page to confirm update details-->
-        <article class="mytrips-confirm" id="confirm-update-trip">
+        <section class="mytrips-confirm" id="confirm-update-trip">
             <!--question-div-->
-            <div class="question-wrapper" id="update-question-wrapper">
+            <article class="question-wrapper" id="update-question-wrapper">
                 <div class="question-left">
                     <img src="images/icon_question.png" alt="Ikon som föreställer en rund cirkel med ett frågetecken i">
                     <div class="question-left-text">
-                        <p>Är du säker att du vill uppdatera resan?</p>
+                        <p id="p-question">Är du säker att du vill uppdatera resan?</p>
                     </div>
                 </div>
                 <div class="question-right">
-                    <button id="question-yes" class="question-yes" onclick="changeUpdateBox()"> Ja</button>
-                    <button id="question-no" class="question-no" onclick="goBack()">Nej</button>
+                    <button aria-labelledby="p-question" id="question-yes" class="question-yes" onclick="changeUpdateBox()"> Ja</button>
+                    <button aria-labelledby="p-question" id="question-no" class="question-no" onclick="goBack()">Nej</button>
                 </div>
-            </div>
+            </article>
             <!--info-div-->
-            <div class="hidden-info-wrapper" id="update-hidden-info-wrapper">
+            <article class="hidden-info-wrapper" id="update-hidden-info-wrapper">
                 <div class="hidden-info-text">
                     <p class="changed-trip-p">Din resa är uppdaterad!</p>
                     <a href="mytrips.html">Gå tillbaka till dina resor</a>    
                 </div>
-            </div>        
-        </article>
-    </section>
+            </article>        
+        </section>
+    </main>
     <!--scripts-->
     <script src="js/main.js"></script>
 </body>

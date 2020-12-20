@@ -12,8 +12,13 @@
     <!--header-->
     <header class="header" id="header-loggedout">
         <div class="menu-container">
-            <a href=""><img class="header-logo" src="images/logo_black.png" alt="Logotyp. Logotypen är en buss med texten Färdtjänst på."></a>
-            <nav class="menu-list" id="menu-list-loggedin">
+            <a href="about.html" aria-label="Klickar du på logotypen hamnar du på startsidan som innehåller information om färdtjänst"><img class="header-logo" src="images/logo_black.png" alt="Logotyp. Logotypen är en buss med texten Färdtjänst på."></a>
+            <!-- hamburgermenu -->
+            <div>
+                <button class="menu-icon" id="open-menu" aria-label="Öppna meny" aria-expanded="false" aria-controls="menu-list-loggedin" aria-haspopup="true" onclick="LoggedInNav()">&#9776;</button>
+                <button class="menu-icon" id="close-menu" aria-label="Stäng meny" onclick="LoggedInNav()">&times;</button>
+            </div>
+            <nav class="menu-list" id="menu-list-loggedin" aria-label="huvudmeny">
                 <ul>
                     <li><a class="menu-text" href="about.html"><img class="header-icon" src="images/icon_info.png" alt="Ikon på en cirkel med bokstaven i i. Den ska symbolisera en ikon för information.">Färdtjänst</a></li>
                     <li><a class="menu-text active" href="book.html"><img class="header-icon" src="images/icon_location.png" alt="Ikon på en en knappnål för att symbolisera en destionation">Boka en resa</a></li>
@@ -21,26 +26,21 @@
                     <li><a class="menu-text" href="account.html"><img class="header-icon" src="images/icon-user.png" alt="Ikon på en gubbe för att symbolisera en användare">Mina sidor</a></li>
                 </ul>
             </nav>
-            <!-- hamburgermenu -->
-            <div>
-                <a href="javascript:void(0)" class="menu-icon" id="open-menu" onclick="LoggedInNav()">&#9776;</a>
-                <a href="javascript:void(0)" class="menu-icon" id="close-menu" onclick="LoggedInNav()">&times;</a>
-            </div>
         </div>
         <div class="menu-background-container">
             <h1>Boka en resa</h1>
         </div>
     </header>
     <!--Content-->
-    <section class="container">
+    <main class="container">
         <!--här kommer innehåll-->
-        <article class="choose-booking-container">
+        <section class="choose-booking-container">
             <h2>Boka en resa</h2>
             <a class="choose-booking-link" href="booksingle.html">Boka enkelresa</a>
             <a class="choose-booking-link" href="bookreturn.html">Boka tur och retur</a>
             <a class="choose-booking-link" href="bookrecurrent.html">Boka återkommande resa</a>
-        </article>
-        <article class="info-box-container">
+        </section>
+        <section class="info-box-container">
             <!--info-div-->
             <div class="info-wrapper" id="info-wrapper">
                 <img src="images/icon_info.png" alt="Ikon som föreställer en rund cirkel med ett i inuti">
@@ -48,8 +48,8 @@
                     <a href="feedback.html">Klicka på mig för att skicka in dina synpunkter på hur du tror att vi kan förbättra webbsidan för att den ska förstås och kunnas användas av alla!</a>
                 </div>
             </div>
-        </article>
-    </section>
+        </section>
+    </main>
     <!--Footer-->
     <footer id="footer">
         <!--Footer top part-->
@@ -71,9 +71,9 @@
                 <a class="footer-a" href="availability.html">Läs om hur vi tänker kring tillgänglighet</a> 
                 <h2 class="footer-heading">Kontakta oss:</h2>
                 <a class="footer-a" href="mailto:mail@mail.se"><img class="footer-icon" src="images/icon_mail_white.png" alt="Ikon som liknar brev">Klicka här för att maila oss</a> 
-                <a class="footer-a" href=""><img class="footer-icon" src="images/icon_phone_white.png" alt="Ikon som liknar en telefon">072-160 66 08</a> 
+                <p class="footer-a"><img class="footer-icon" src="images/icon_phone_white.png" alt="Ikon som liknar en telefon">072-160 66 08</p> 
                 <h2 class="footer-heading">Hittade du det du söker efter?</h2>
-                <form id="search-form" action="search.html">
+                <form id="search-form" role="search" action="search.html">
                     <input class="footer-search" type="search" placeholder="Sök här">
                     <button class="footer-search-button" type="submit"><img class="footer-search-button-img" src="images/icon_searche.png" alt="ikon som visar ett förstoringsglas"></button>
                 </form>

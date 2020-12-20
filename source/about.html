@@ -12,8 +12,13 @@
     <!--header-->
     <header class="header" id="header-loggedout">
         <div class="menu-container">
-            <a href=""><img class="header-logo" src="images/logo_black.png" alt="Logotyp. Logotypen är en buss med texten Färdtjänst på."></a>
-            <nav class="menu-list" id="menu-list-loggedin">
+            <a href="about.html" aria-label="Klickar du på logotypen hamnar du på startsidan som innehåller information om färdtjänst"><img class="header-logo" src="images/logo_black.png" alt="Logotyp. Logotypen är en buss med texten Färdtjänst på."></a>
+            <!-- hamburgermenu -->
+            <div>
+                <button class="menu-icon" id="open-menu" aria-label="Öppna meny" aria-expanded="false" aria-controls="menu-list-loggedin" aria-haspopup="true" onclick="LoggedInNav()">&#9776;</button>
+                <button class="menu-icon" id="close-menu" aria-label="Stäng meny" onclick="LoggedInNav()">&times;</button>
+            </div>
+            <nav class="menu-list" id="menu-list-loggedin" aria-label="huvudmeny">
                 <ul>
                     <li><a class="menu-text active" href="about.html"><img class="header-icon" src="images/icon_info.png" alt="Ikon på en cirkel med bokstaven i i. Den ska symbolisera en ikon för information.">Färdtjänst</a></li>
                     <li><a class="menu-text" href="book.html"><img class="header-icon" src="images/icon_location.png" alt="Ikon på en en knappnål för att symbolisera en destionation">Boka en resa</a></li>
@@ -21,23 +26,18 @@
                     <li><a class="menu-text" href="account.html"><img class="header-icon" src="images/icon-user.png" alt="Ikon på en gubbe för att symbolisera en användare">Mina sidor</a></li>
                 </ul>
             </nav>
-            <!-- hamburgermenu -->
-            <div>
-                <a href="javascript:void(0)" class="menu-icon" id="open-menu" onclick="LoggedInNav()">&#9776;</a>
-                <a href="javascript:void(0)" class="menu-icon" id="close-menu" onclick="LoggedInNav()">&times;</a>
-            </div>
         </div>
         <div class="menu-background-container">
             <h1>Färdtjänst</h1>
         </div>
     </header>
     <!--Content-->
-    <section class="container">
+    <main class="container">
         <!--här kommer innehåll-->
-        <h2>Information om färdtjänst</h2>
-        <article id="info-container">
+        <section id="info-container">
+            <h2>Information om färdtjänst</h2>
             <!--info-->
-            <div class="info-box">
+            <article class="info-box">
                 <div class="info-box-left">
                     <img src="images/icon_question_green.png" alt="Bild på en ikon som är rund med ett frågetecken i.">
                 </div>
@@ -45,9 +45,9 @@
                     <h3>Vad är färdtjänst?</h3>
                     <p>Färdtjänst är ett sätt att transportera sig för dig som inte har möjlighet att transportera dig med kollektivtrafiken på egen hand. Du kan få färdtjänst om du har en funktionsnedsättning som gör att du har stora svårigheter att förflytta dig på egen hand eller att resa med kollektivtrafik. Din funktionsnedsättning ska finnas i mer än tre månader. Du måste även vara folkboförd i Örebro län.</p>
                 </div>
-            </div>
+            </article>
             <!--time-->
-            <div class="info-box">
+            <article class="info-box">
                 <div class="info-box-left">
                     <img src="images/icon_clock_green.png" alt="Bild på en ikon som är rund och föreställer en klocka.">
                 </div>
@@ -57,9 +57,9 @@
                     <p>Söndag till torsdag: Du har möjlighet att resa mellan kl. 05.30-24.00.</p>
                     <p>Fredag till lördag: Du har möjlighet att resa mellan kl. 05.30-24.00.</p>
                 </div>
-            </div>
+            </article>
             <!--money-->
-            <div class="info-box">
+            <article class="info-box">
                 <div class="info-box-left">
                     <img src="images/icon_money_green.png" alt="Bild på en ikon som föreställer pengar.">
                 </div>
@@ -67,8 +67,8 @@
                     <h3>Vad kostar resan?</h3>
                     <p>Du kan resa med färdtjänst alla dagar i veckan under de tider som kollektivtrafiken är i rullning. Tänk på att boka din resa i god så ska det inte vara några problem att få hjälp.</p>
                 </div>
-            </div>
-            <div class="info-box">
+            </article>
+            <article class="info-box">
                 <div class="info-box-left">
                     <img src="images/icon_location_green.png" alt="Bild på en ikon som ska symbolisera en destination.">
                 </div>
@@ -76,33 +76,33 @@
                     <h3>Var kan jag resa?</h3>
                     <p>Med färdtjänst kan du resa inom hela Örebro Län. Du kan dessutom resa utanför länet men då är begränsningen 30 km från länsgränsen och resan ska börja eller sluta inom Örebro län. Om resan är längre än så kan du ansöka om riksfärdtjänst via <a href="https://www.lanstrafiken.se/serviceresor/fardtjanst-och-riksfardtjanst/fardtjanst/" target="blank">Örebro Kommuns blanketter</a> alternativt via <a href="https://e-tjanster.1177.se/mvk/login/login.xhtml" target="blank">dina vårdtjänster på 1177</a>.</p>
                 </div>
-            </div>
-        </article>
+            </article>
+        </section>
         <!--question-->
-        <article id="question-container">
+        <section id="question-container">
             <!--question-div-->
-            <div class="question-wrapper" id="question-wrapper">
+            <article class="question-wrapper" id="question-wrapper">
                 <div class="question-left">
                     <img src="images/icon_question.png" alt="Ikon som föreställer en rund cirkel med ett frågetecken i">
                     <div class="question-left-text">
-                        <p>Hjälpte informationen på den här sidan dig?</p>
+                        <p id="p-question">Hjälpte informationen på den här sidan dig?</p>
                     </div>
                 </div>
                 <div class="question-right">
-                    <button id="question-yes" class="question-yes" onclick="changeBox()"> Ja</button>
-                    <button id="question-no" class="question-no" onclick="changeBox()">Nej</button>
+                    <button aria-labelledby="p-question" id="question-yes" class="question-yes" aria-label="ja" onclick="changeBox()"> Ja</button>
+                    <button aria-labelledby="p-question" id="question-no" class="question-no" aria-label="nej" onclick="changeBox()">Nej</button>
                 </div>
-            </div>
+            </article>
             <!--info-div-->
-            <div class="hidden-info-wrapper" id="hidden-info-wrapper">
+            <article class="hidden-info-wrapper" id="hidden-info-wrapper">
                 <img src="images/icon_info.png" alt="Ikon som föreställer en rund cirkel med ett i inuti">
                 <div class="hidden-info-text">
                     <p>Tack för din feedback!</p>
                     <a href="availability.html">Gå gärna in och läs om vårat arbete kring tillgänglighet här</a>
                 </div>
-            </div>
-        </article>
-    </section>
+            </article>
+        </section>
+    </main>
     <!--Footer-->
     <footer id="footer">
         <!--Footer top part-->
@@ -124,9 +124,9 @@
                 <a class="footer-a" href="availability.html">Läs om hur vi tänker kring tillgänglighet</a> 
                 <h2 class="footer-heading">Kontakta oss:</h2>
                 <a class="footer-a" href="mailto:mail@mail.se"><img class="footer-icon" src="images/icon_mail_white.png" alt="Ikon som liknar brev">Klicka här för att maila oss</a> 
-                <a class="footer-a" href=""><img class="footer-icon" src="images/icon_phone_white.png" alt="Ikon som liknar en telefon">072-160 66 08</a> 
+                <p class="footer-a"><img class="footer-icon" src="images/icon_phone_white.png" alt="Ikon som liknar en telefon">072-160 66 08</p> 
                 <h2 class="footer-heading">Hittade du det du söker efter?</h2>
-                <form id="search-form" action="search.html">
+                <form id="search-form" role="search" action="search.html">
                     <input class="footer-search" type="search" placeholder="Sök här">
                     <button class="footer-search-button" type="submit"><img class="footer-search-button-img" src="images/icon_searche.png" alt="ikon som visar ett förstoringsglas"></button>
                 </form>

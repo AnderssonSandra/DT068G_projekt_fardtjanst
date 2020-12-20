@@ -9,8 +9,8 @@
 <link href="https://fonts.googleapis.com/css2?family=Inria+Serif&display=swap" rel="stylesheet">
 </head>
 <body>
-    <section class="popup-container">
-        <article id="feedback-wrapper">
+    <main class="popup-container">
+        <section id="feedback-wrapper">
             <h2>Skicka in din feedback till oss</h2>
             <!--info-div-->
             <div class="info-wrapper">
@@ -19,20 +19,20 @@
                     <p>Alla fält är valfri att fylla i men du måste ange namn och kontaktuppgifter om du vill att vi ska kunna återkoppla till dig angående din feedback.</p>
                 </div>
             </div>
-            <form id="feedback-form" action="feedbacksent.html">
+            <form aria-label="formulär för att ge feedback om tillgängligheten på sidan" id="feedback-form" action="feedbacksent.html">
                 <label for="feedback-name">Namn:</label><br>
-                <input type="text" id="feedback-name" name="feedback-name" placeholder="Skriv in ditt namn här"><br>
+                <input type="text" autocomplete="on" id="feedback-name" name="feedback-name" placeholder="Skriv in ditt namn här"><br>
                 <label for="feedback-phone">Hem eller mobilnummer:</label><br>
-                <input type="text" id="feedback-phone" name="feedback-phone" placeholder="Skriv in ditt nummer här"><br>
+                <input type="text" autocomplete="on" id="feedback-phone" name="feedback-phone" placeholder="Skriv in ditt nummer här"><br>
                 <label for="feedback-email">E-post:</label><br>
-                <input type="text" id="feedback-email" name="feedback-email" placeholder="Skriv in din e-post här"><br>
+                <input type="text" autocomplete="on" id="feedback-email" name="feedback-email" placeholder="Skriv in din e-post här"><br>
                 <label for="feedback-feedback">Feedback:</label><br>
                 <textarea rows="10" cols="70" id="feedback-feedback" name="feedback-feedback" placeholder="Skriv in din feedback här"></textarea><br>
                 <input class="submit" id="feedback-submit" type="submit" value="Skicka in feedback">
             </form>
             <a class="go-back-link" href="javascript:history.back()">Vill du inte ge feedback längre? Klicka här för att gå tillbaka</a>
-        </article>
-    </section>
+        </section>
+    </main>
     <!--scripts-->
     <script src="js/main.js"></script>    
 </body>

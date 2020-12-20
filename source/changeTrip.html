@@ -9,21 +9,21 @@
 <link href="https://fonts.googleapis.com/css2?family=Inria+Serif&display=swap" rel="stylesheet">
 </head>
 <body>
-    <section class="popup-container">
-        <h2>Ändra din resa</h2>
-        <article class="change-trip">
-            <form id="form" action="">
+    <main class="popup-container">
+        <section class="change-trip">
+            <h2>Ändra din resa</h2>
+            <form aria-label="formulär för att redigera resa" id="form" action="changeTrip.html">
                 <label for="from">Från:</label><br>
-                <input type="text" id="from" name="from" value="Drottninggatan 4"><br>
+                <input type="text" id="from" name="from" autocomplete="on" value="Drottninggatan 4"><br>
                 
                 <label for="to">Till:</label><br>
-                <input type="text" id="to" name="to" value="Kungsgatan 31"><br>
+                <input type="text" id="to" name="to" autocomplete="on" value="Kungsgatan 31"><br>
                 
                 <label for="date">Vilket datum vill du åka?</label>
                 <input type="date" id="date" name="date" value="2020-12-25">
 
                 <label for="time">Ange tid du vill vara framme:</label>
-                <input type="time" id="time" min="05:30" max="00:00" value="10:00" name="time" onchange="checkTime(this.value);">
+                <input type="time" id="time" min="05:30" autocomplete="on" max="00:00" value="10:00" name="time" onchange="checkTime(this.value);">
                 <div id="time-error-container">
                     <!--add errormessage if time is wrong-->
                 </div>
@@ -68,11 +68,11 @@
                     <!--add questions depended on choise of aid-->
                 </div>
             </form>
-            <a href="confirmupdate.html" class="update-button" id="update-trip">Uppdatera resa</a>
+            <a href="confirmUpdate.html" class="update-button" id="update-trip">Uppdatera resa</a>
             <a href="confirmDelete.html" class="update-button" id="delete-trip">Avboka resan</a>
             <a class="go-back-link" href="javascript:history.back()">Vill du inte ändra din resa? Klicka här för att gå tillbaka</a>
-        </article>
-    </section>    
+        </section>
+    </main>    
     <!--scripts-->
     <script src="js/main.js"></script>
 </body>

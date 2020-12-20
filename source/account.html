@@ -12,8 +12,13 @@
     <!--header-->
     <header class="header" id="header-loggedout">
         <div class="menu-container">
-            <a href=""><img class="header-logo" src="images/logo_black.png" alt="Logotyp. Logotypen är en buss med texten Färdtjänst på."></a>
-            <nav class="menu-list" id="menu-list-loggedin">
+            <a href="about.html" aria-label="Klickar du på logotypen hamnar du på startsidan som innehåller information om färdtjänst"><img class="header-logo" src="images/logo_black.png" alt="Logotyp. Logotypen är en buss med texten Färdtjänst på."></a>
+            <!-- hamburgermenu -->
+            <div>
+                <button class="menu-icon" id="open-menu" aria-label="Öppna meny" aria-expanded="false" aria-controls="menu-list-loggedin" aria-haspopup="true" onclick="LoggedInNav()">&#9776;</button>
+                <button class="menu-icon" id="close-menu" aria-label="Stäng meny" onclick="LoggedInNav()">&times;</button>
+            </div>
+            <nav class="menu-list" id="menu-list-loggedin" aria-label="huvudmeny">
                 <ul>
                     <li><a class="menu-text" href="about.html"><img class="header-icon" src="images/icon_info.png" alt="Ikon på en cirkel med bokstaven i i. Den ska symbolisera en ikon för information.">Färdtjänst</a></li>
                     <li><a class="menu-text" href="book.html"><img class="header-icon" src="images/icon_location.png" alt="Ikon på en en knappnål för att symbolisera en destionation">Boka en resa</a></li>
@@ -21,118 +26,113 @@
                     <li><a class="menu-text active" href="account.html"><img class="header-icon" src="images/icon-user.png" alt="Ikon på en gubbe för att symbolisera en användare">Mina sidor</a></li>
                 </ul>
             </nav>
-            <!-- hamburgermenu -->
-            <div>
-                <a href="javascript:void(0)" class="menu-icon" id="open-menu" onclick="LoggedInNav()">&#9776;</a>
-                <a href="javascript:void(0)" class="menu-icon" id="close-menu" onclick="LoggedInNav()">&times;</a>
-            </div>
         </div>
         <div class="menu-background-container">
             <h1>Mina sidor</h1>
         </div>
     </header>
     <!--Content-->
-    <section class="container">
+    <main class="container">
         <!--här kommer innehåll-->
-        <article class="my-site-container">
+        <section class="my-site-container">
             <h2>Mina personliga uppgifter</h2>
-            <form id="personal-info-form" action="personalInfoUpdate.html">
+            <form aria-label="formulär som beskriver dina personliga uppgifter" id="personal-info-form" action="personalInfoUpdate.html">
                 <label for="personal-info-personId">Personnummer (kan inte uppdatera):</label><br>
-                <input type="text" id="personal-info-personId" name="personal-info-personId" value="19420920-3312" placeholder="Skriv in ditt personnummer här"><br>
+                <input disabled type="text" id="personal-info-personId" name="personal-info-personId" value="19420920-3312" placeholder="Skriv in ditt personnummer här"><br>
                 <label for="personal-info-customerId">Kundnummer för färdtjänst:</label><br>
-                <input type="text" id="personal-info-customerId" name="personal-info-customerId" value="1234567890" placeholder="Skriv in ditt kundnummer här"><br>
+                <input disabled type="text" id="personal-info-customerId" name="personal-info-customerId" value="1234567890" placeholder="Skriv in ditt kundnummer här"><br>
                 <label for="personal-info-phone">Telefonnummer:</label><br>
-                <input type="text" id="personal-info-phone" name="personal-info-phone" value="072-123 45 67" placeholder="Skriv in din telefonnummer här"><br>
+                <input disabled type="text" id="personal-info-phone" name="personal-info-phone" value="072-123 45 67" placeholder="Skriv in din telefonnummer här"><br>
                 <label for="personal-info-email">E-post:</label><br>
-                <input type="text" id="personal-info-email" name="personal-info-email" value="agda@email.com" placeholder="Skriv in din e-post här"><br>
+                <input disabled type="text" id="personal-info-email" name="personal-info-email" value="agda@email.com" placeholder="Skriv in din e-post här"><br>
                 <label for="personal-info-address">Adress:</label><br>
-                <input type="text" id="personal-info-address" name="personal-info-address" value="Drottninggatan 4" placeholder="Uppdatera adress"><br>
+                <input disabled type="text" id="personal-info-address" name="personal-info-address" value="Drottninggatan 4" placeholder="Uppdatera adress"><br>
                 <label for="personal-info-zip">Postnummer:</label><br>
-                <input type="text" id="personal-info-zip" name="personal-info-zip" value="702 10" placeholder="Uppdatera postnummer"><br>
+                <input disabled type="text" id="personal-info-zip" name="personal-info-zip" value="702 10" placeholder="Uppdatera postnummer"><br>
                 <label for="personal-info-city">Postort:</label><br>
-                <input type="text" id="personal-info-city" name="personal-info-city" value="Örebro" placeholder="Uppdatera postort"><br>
+                <input disabled type="text" id="personal-info-city" name="personal-info-city" value="Örebro" placeholder="Uppdatera postort"><br>
                 <input type="submit" class="update-button" value="Uppdatera reseuppgifter">
             </form>
-        </article>
+        </section>
         <!--div for travel info-->
-        <article class="my-site-container">
+        <section class="my-site-container">
             <h2>Mina reseuppgifter</h2>
-            <form id="travel-info-form" action="travelInfoUpdate.html">
+            <form aria-label="formulär som beskriver dina rese-uppgifter" id="travel-info-form" action="travelInfoUpdate.html">
                 <p class="form-p">Bocka i rutorna för den/de funktionsnedsätningarna du har</p>
                 <div class="form-wrapper">
                     <div class="form-card"> 
-                        <input checked type="checkbox" class="checkbox" id="travel-info-disability-walk" name="travel-info-disability-walk" value="walk">
+                        <input disabled checked type="checkbox" class="checkbox" id="travel-info-disability-walk" name="travel-info-disability-walk" value="walk">
                         <label class="checkbox-label" for="travel-info-disability-walk">Gångsvårigheter</label><br>                
-                        <input checked type="checkbox" class="checkbox" id="travel-info-disability-eyes" name="travel-info-disability-eyes" value="eyes">
+                        <input disabled checked type="checkbox" class="checkbox" id="travel-info-disability-eyes" name="travel-info-disability-eyes" value="eyes">
                         <label class="checkbox-label" for="travel-info-disability-eyes">Synnedsättning</label><br>
-                        <input type="checkbox" class="checkbox" id="travel-info-disability-orientation" name="travel-info-disability-orientation" value="orientation">
+                        <input disabled type="checkbox" class="checkbox" id="travel-info-disability-orientation" name="travel-info-disability-orientation" value="orientation">
                         <label class="checkbox-label" for="travel-info-disability-orientation">Orienteringssvårigheter</label><br>
-                        <input type="checkbox" class="checkbox" id="travel-info-disability-dizziness" name="travel-info-disability-dizziness" value="dizziness">
+                        <input disabled type="checkbox" class="checkbox" id="travel-info-disability-dizziness" name="travel-info-disability-dizziness" value="dizziness">
                         <label class="checkbox-label" for="travel-info-disability-dizziness">Yrsel</label><br>
                     </div>
                     <div class="form-card">
-                        <input type="checkbox" class="checkbox" id="travel-info-disability-balance" name="travel-info-disability-balance" value="balance">        
+                        <input disabled type="checkbox" class="checkbox" id="travel-info-disability-balance" name="travel-info-disability-balance" value="balance">        
                         <label class="checkbox-label" for="travel-info-disability-balance">Balanssvårigheter</label><br>
-                        <input type="checkbox" class="checkbox" id="travel-info-disability-heart" name="travel-info-disability-heart" value="heart">
+                        <input disabled type="checkbox" class="checkbox" id="travel-info-disability-heart" name="travel-info-disability-heart" value="heart">
                         <label class="checkbox-label" for="travel-info-disability-heart">Hjärt - och/eller kärlproblem</label><br>
-                        <input type="checkbox" class="checkbox" id="travel-info-disability-mental" name="travel-info-disability-mental" value="mental">
+                        <input disabled type="checkbox" class="checkbox" id="travel-info-disability-mental" name="travel-info-disability-mental" value="mental">
                         <label class="checkbox-label" for="travel-info-disability-mental">Psykiska besvär</label><br>
-                        <input type="checkbox" class="checkbox" id="travel-info-disability-other" name="travel-info-disability-other" value="other">
+                        <input disabled type="checkbox" class="checkbox" id="travel-info-disability-other" name="travel-info-disability-other" value="other">
                         <label class="checkbox-label" for="travel-info-disability-other">Annat</label><br>        
                     </div>
                 </div>
                 <p class="form-p">Bocka i rutorna för de hjälpmedel du använder:</p>
                 <div class="form-wrapper">
                     <div class="form-card">
-                        <input type="checkbox" class="checkbox" id="travel-info-aid-wheelchair" name="travel-info-aid-wheelchair" value="wheelchair">
+                        <input disabled type="checkbox" class="checkbox" id="travel-info-aid-wheelchair" name="travel-info-aid-wheelchair" value="wheelchair">
                         <label class="checkbox-label" for="travel-info-aid-wheelchair">Rullstol</label><br>
-                        <input type="checkbox" class="checkbox" id="travel-info-aid-walker" name="travel-info-aid-walker" value="walker">
+                        <input disabled type="checkbox" class="checkbox" id="travel-info-aid-walker" name="travel-info-aid-walker" value="walker">
                         <label class="checkbox-label" for="travel-info-aid-walker">Rullator</label><br>
-                        <input checked type="checkbox" class="checkbox" id="travel-info-aid-crutch" name="travel-info-aid-crutch" value="crutch">
+                        <input disabled checked type="checkbox" class="checkbox" id="travel-info-aid-crutch" name="travel-info-aid-crutch" value="crutch">
                         <label class="checkbox-label" for="travel-info-aid-crutch">Käpp/kryckor/stavar</label><br>
                     </div>
                     <div>
-                        <input checked type="checkbox" class="checkbox" id="travel-info-aid-dog" name="travel-info-aid-dog" value="dog">
+                        <input disabled checked type="checkbox" class="checkbox" id="travel-info-aid-dog" name="travel-info-aid-dog" value="dog">
                         <label class="checkbox-label" for="travel-info-aid-dog">Ledsagarhund</label><br>
-                        <input type="checkbox" class="checkbox" id="travel-info-aid-permobil" name="travel-info-aid-permobil" value="permobil">
+                        <input disabled type="checkbox" class="checkbox" id="travel-info-aid-permobil" name="travel-info-aid-permobil" value="permobil">
                         <label class="checkbox-label" for="travel-info-aid-permobil">Permobil</label><br>
-                        <input type="checkbox" class="checkbox" id="travel-info-aid-other" name="travel-info-aid-other" value="other">
+                        <input disabled type="checkbox" class="checkbox" id="travel-info-aid-other" name="travel-info-aid-other" value="other">
                         <label class="checkbox-label" for="travel-info-aid-other">annat</label><br>
                     </div>
                 </div>
                 <p class="form-p">Kan du förflytta dig till annat säte?</p>
-                <input checked type="radio" class="radiobox" id="travel-info-move-in-car-yes" name="travel-info-move-in-car" value="ja">
+                <input disabled checked type="radio" class="radiobox" id="travel-info-move-in-car-yes" name="travel-info-move-in-car" value="ja">
                 <label for="travel-info-move-in-car-yes" class="yes-label">Ja</label>
-                <input type="radio" class="radiobox" id="travel-info-move-in-car-no" name="travel-info-move-in-car" value="no">
+                <input disabled type="radio" class="radiobox" id="travel-info-move-in-car-no" name="travel-info-move-in-car" value="no">
                 <label for="travel-info-move-in-car-no" class="no-label">Nej</label><br>
                 
                 <p class="form-p">Kan du förflytta dig till och från bilen på egen hand?</p>
-                <input checked type="radio" class="radiobox" id="travel-info-move-to-car-yes" name="travel-info-move-to-car" value="ja">
+                <input disabled checked type="radio" class="radiobox" id="travel-info-move-to-car-yes" name="travel-info-move-to-car" value="ja">
                 <label for="travel-info-move-to-car-yes" class="yes-label">Ja</label>
-                <input type="radio" class="radiobox" id="travel-info-move-to-car-no" name="travel-info-move-to-car" value="no">
+                <input disabled type="radio" class="radiobox" id="travel-info-move-to-car-no" name="travel-info-move-to-car" value="no">
                 <label for="travel-info-move-to-car-no" class="no-label">Nej</label><br>
                 
                 <p class="form-p">Har du hiss i din bostad?</p>
-                <input checked type="radio" class="radiobox" id="travel-info-elevator-yes" name="travel-info-elevator" value="ja">
+                <input disabled checked type="radio" class="radiobox" id="travel-info-elevator-yes" name="travel-info-elevator" value="ja">
                 <label for="travel-info-elevator-yes" class="yes-label">Ja</label>
-                <input type="radio" class="radiobox" id="travel-info-elevator-no" name="travel-info-elevator" value="no">
+                <input disabled type="radio" class="radiobox" id="travel-info-elevator-no" name="travel-info-elevator" value="no">
                 <label for="travel-info-elevator-no" class="no-label">Nej</label><br>
                                                 
                 <p class="form-p">Har du några speciella behov?</p>
-                <input type="radio" class="radiobox" id="travel-info-special-needs-yes" name="travel-info-special-needs" value="ja">
+                <input disabled type="radio" class="radiobox" id="travel-info-special-needs-yes" name="travel-info-special-needs" value="ja">
                 <label for="travel-info-special-needs-yes" class="yes-label">Ja</label>
-                <input checked type="radio" class="radiobox" id="travel-info-special-needs-no" name="travel-info-special-needs" value="no">
+                <input disabled checked type="radio" class="radiobox" id="travel-info-special-needs-no" name="travel-info-special-needs" value="no">
                 <label for="travel-info-special-needs-no" class="no-label">Nej</label><br>
             
                 <p class="form-p">Betalar du med månadskort?</p>
-                <input checked type="radio" class="radiobox" id="travel-info-monthcard-yes" name="travel-monthcard-needs" value="ja">
+                <input disabled checked type="radio" class="radiobox" id="travel-info-monthcard-yes" name="travel-monthcard-needs" value="ja">
                 <label for="travel-info-monthcard-yes" class="yes-label">Ja</label>
-                <input type="radio" class="radiobox" id="travel-info-monthcard-no" name="travel-monthcard-needs" value="no">
+                <input disabled type="radio" class="radiobox" id="travel-info-monthcard-no" name="travel-monthcard-needs" value="no">
                 <label for="travel-info-monthcard-no" class="no-label">Nej</label><br>
                 <input type="submit" class="update-button" value="Uppdatera reseuppgifter">
             </form>
-        </article>
-        <article class="info-box-container">
+        </section>
+        <section class="info-box-container">
             <!--info-div-->
             <div class="info-wrapper" id="info-wrapper">
                 <img src="images/icon_info.png" alt="Ikon som föreställer en rund cirkel med ett i inuti">
@@ -140,8 +140,8 @@
                     <a href="feedback.html">Klicka på mig för att skicka in dina synpunkter på hur du tror att vi kan förbättra webbsidan för att den ska förstås och kunnas användas av alla!</a>
                 </div>
             </div>
-        </article>
-    </section>
+        </section>
+    </main>
     <!--Footer-->
     <footer id="footer">
         <!--Footer top part-->
@@ -163,10 +163,10 @@
                 <a class="footer-a" href="availability.html">Läs om hur vi tänker kring tillgänglighet</a> 
                 <h2 class="footer-heading">Kontakta oss:</h2>
                 <a class="footer-a" href="mailto:mail@mail.se"><img class="footer-icon" src="images/icon_mail_white.png" alt="Ikon som liknar brev">Klicka här för att maila oss</a> 
-                <a class="footer-a" href=""><img class="footer-icon" src="images/icon_phone_white.png" alt="Ikon som liknar en telefon">072-160 66 08</a> 
+                <p class="footer-a"><img class="footer-icon" src="images/icon_phone_white.png" alt="Ikon som liknar en telefon">072-160 66 08</p> 
                 <h2 class="footer-heading">Hittade du det du söker efter?</h2>
-                <form id="search-form" action="search.html">
-                    <input class="footer-search" type="search" placeholder="Sök här">
+                <form id="search-form" role="search" action="search.html">
+                    <input disabled class="footer-search" type="search" placeholder="Sök här">
                     <button class="footer-search-button" type="submit"><img class="footer-search-button-img" src="images/icon_searche.png" alt="ikon som visar ett förstoringsglas"></button>
                 </form>
             </div>

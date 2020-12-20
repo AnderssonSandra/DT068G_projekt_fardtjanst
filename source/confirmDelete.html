@@ -9,22 +9,22 @@
 <link href="https://fonts.googleapis.com/css2?family=Inria+Serif&display=swap" rel="stylesheet">
 </head>
 <body>
-    <section class="popup-container">
+    <main class="popup-container">
         <!--page to confirm update details-->
-        <article class="mytrips-confirm" id="confirm-delete-trip">
+        <section class="mytrips-confirm" id="confirm-delete-trip">
             <!--question-div-->
-            <div class="question-wrapper" id="delete-question-wrapper">
+            <article class="question-wrapper" id="delete-question-wrapper">
                 <div class="question-left">
                     <img src="images/icon_question.png" alt="Ikon som föreställer en rund cirkel med ett frågetecken i">
                     <div class="question-left-text">
-                        <p>Är du säker att du vill radera resan?</p>
+                        <p id="p-question">Är du säker att du vill radera resan?</p>
                     </div>
                 </div>
                 <div class="question-right">
-                    <button id="question-delete-yes" class="question-yes" onclick="changeDeleteBox()"> Ja</button>
-                    <button id="question-delete-no" class="question-no" onclick="goBack()">Nej</button>
+                    <button aria-labelledby="p-question" id="question-delete-yes" class="question-yes" onclick="changeDeleteBox()"> Ja</button>
+                    <button aria-labelledby="p-question" id="question-delete-no" class="question-no" onclick="goBack()">Nej</button>
                 </div>
-            </div>
+            </article>
             <!--info-div-->
             <div class="hidden-info-wrapper" id="delete-hidden-info-wrapper">
                 <div class="hidden-info-text">
@@ -32,16 +32,9 @@
                     <a href="mytrips.html">Gå tillbaka till dina resor</a>    
                 </div>
             </div>    
-        </article>
-    </section>
+        </section>
+    </main>
     <!--scripts-->
     <script src="js/main.js"></script>
 </body>
 </html>
-
-
-<!--question if you want to delete-->
-<div class="popup" id="confirm-delete-trip-popup">
-    <!--question-div-->
-            
-</div>

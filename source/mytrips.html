@@ -12,8 +12,13 @@
     <!--header-->
     <header class="header" id="header-loggedout">
         <div class="menu-container">
-            <a href=""><img class="header-logo" src="images/logo_black.png" alt="Logotyp. Logotypen är en buss med texten Färdtjänst på."></a>
-            <nav class="menu-list" id="menu-list-loggedin">
+            <a href="about.html" aria-label="Klickar du på logotypen hamnar du på startsidan som innehåller information om färdtjänst"><img class="header-logo" src="images/logo_black.png" alt="Logotyp. Logotypen är en buss med texten Färdtjänst på."></a>
+            <!-- hamburgermenu -->
+            <div>
+                <button class="menu-icon" id="open-menu" aria-label="Öppna meny" aria-expanded="false" aria-controls="menu-list-loggedin" aria-haspopup="true" onclick="LoggedInNav()">&#9776;</button>
+                <button class="menu-icon" id="close-menu" aria-label="Stäng meny" onclick="LoggedInNav()">&times;</button>
+            </div>
+            <nav class="menu-list" id="menu-list-loggedin" aria-label="huvudmeny">
                 <ul>
                     <li><a class="menu-text" href="about.html"><img class="header-icon" src="images/icon_info.png" alt="Ikon på en cirkel med bokstaven i i. Den ska symbolisera en ikon för information.">Färdtjänst</a></li>
                     <li><a class="menu-text" href="book.html"><img class="header-icon" src="images/icon_location.png" alt="Ikon på en en knappnål för att symbolisera en destionation">Boka en resa</a></li>
@@ -21,25 +26,20 @@
                     <li><a class="menu-text" href="account.html"><img class="header-icon" src="images/icon-user.png" alt="Ikon på en gubbe för att symbolisera en användare">Mina sidor</a></li>
                 </ul>
             </nav>
-            <!-- hamburgermenu -->
-            <div>
-                <a href="javascript:void(0)" class="menu-icon" id="open-menu" onclick="LoggedInNav()">&#9776;</a>
-                <a href="javascript:void(0)" class="menu-icon" id="close-menu" onclick="LoggedInNav()">&times;</a>
-            </div>
         </div>
         <div class="menu-background-container">
             <h1>Mina resor</h1>
         </div>
     </header>
     <!--Content-->
-    <section class="container">
+    <main class="container">
         <!--här kommer innehåll-->
-        <article id="mytrips-search-container">
+        <section id="mytrips-search-container">
             <h2>Mina resor</h2>
-        </article>
-        <article id="mytrips-container">
+        </section>
+        <section id="mytrips-container">
             <h3>Sortera resor</h3>
-            <form action="#trip-recurrent-heading">
+            <form aria-label="formulär för att ange alternativ att sortera resor på" action="#trip-recurrent-heading">
                 <label for="date">Sortera resor på datum:</label>
                 <input type="date" id="date">
                 <label for="destination">Sök på resa efter destination:</label>
@@ -53,7 +53,7 @@
                 </select>
             </form>
             <h3 id="trips">Kommande resor</h3>
-            <div class="trip">
+            <article class="trip">
                 <div class="trip-text">
                     <div class="trip-text-date">
                         <h4><img class="mytrips-icon" src="images/icon_clock_green.png" alt="Ikon som föreställer en klocka">Datum och ankomst:</h4>
@@ -68,8 +68,8 @@
                     <a class="mytrips-link" href="mytripsDetails.html">Visa detaljer</a>
                     <a class="mytrips-link" href="changeTrip.html">Ändra resa</a>
                 </div>
-            </div>
-            <div class="trip">
+            </article>
+            <article class="trip">
                 <div class="trip-text">
                     <div class="trip-text-date">
                         <h4><img class="mytrips-icon" src="images/icon_clock_green.png" alt="Ikon som föreställer en klocka">Datum och ankomst:</h4>
@@ -84,8 +84,8 @@
                     <a class="mytrips-link" href="mytripsDetails.html">Visa detaljer</a>
                     <a class="mytrips-link" href="changeTrip.html">Ändra resa</a>
                 </div>
-            </div>
-            <div class="trip">
+            </article>
+            <article class="trip">
                 <div class="trip-text">
                     <div class="trip-text-date">
                         <h4><img class="mytrips-icon" src="images/icon_clock_green.png" alt="Ikon som föreställer en klocka">Datum och ankomst:</h4>
@@ -100,8 +100,8 @@
                     <a class="mytrips-link" href="mytripsDetails.html">Visa detaljer</a>
                     <a class="mytrips-link" href="changeTrip.html">Ändra resa</a>
                 </div>
-            </div>
-            <div class="trip">
+            </article>
+            <article class="trip">
                 <div class="trip-text">
                     <div class="trip-text-date">
                         <h4><img class="mytrips-icon" src="images/icon_clock_green.png" alt="Ikon som föreställer en klocka">Datum och ankomst:</h4>
@@ -116,8 +116,8 @@
                     <a class="mytrips-link" href="mytripsDetails.html">Visa detaljer</a>
                     <a class="mytrips-link" href="changeTrip.html">Ändra resa</a>
                 </div>
-            </div>
-            <div class="trip">
+            </article>
+            <article class="trip">
                 <div class="trip-text">
                     <div class="trip-text-date">
                         <h4><img class="mytrips-icon" src="images/icon_clock_green.png" alt="Ikon som föreställer en klocka">Datum och ankomst:</h4>
@@ -132,8 +132,8 @@
                     <a class="mytrips-link" href="mytripsDetails.html">Visa detaljer</a>
                     <a class="mytrips-link" href="changeTrip.html">Ändra resa</a>
                 </div>
-            </div>
-            <div class="trip">
+            </article>
+            <article class="trip">
                 <div class="trip-text">
                     <div class="trip-text-date">
                         <h4><img class="mytrips-icon" src="images/icon_clock_green.png" alt="Ikon som föreställer en klocka">Datum och ankomst:</h4>
@@ -148,11 +148,11 @@
                     <a class="mytrips-link" href="mytripsDetails.html">Visa detaljer</a>
                     <a class="mytrips-link" href="changeTrip.html">Ändra resa</a>
                 </div>
-            </div>
+            </article>
 
             <!--recurrent-->
             <h3 id="trip-recurrent-heading">Åtekommande resor</h3>
-            <div class="trip">
+            <article class="trip">
                 <div class="trip-text">
                     <div class="trip-text-date">
                         <h4><img class="mytrips-icon" src="images/icon_clock_green.png" alt="Ikon som föreställer en klocka">Datum och ankomst:</h4>
@@ -169,11 +169,11 @@
                     <a class="mytrips-link" href="mytripsRecurrentDetail.html">Visa detaljer</a>
                     <a class="mytrips-link" href="changeRecurrentTrip.html">Ändra resa</a>
                 </div>
-            </div>
+            </article>
 
             <!--history-->
             <h3 id="trip-history-heading">Resehistorik</h3>
-            <div class="trip">
+            <article class="trip">
                 <div class="trip-text">
                     <div class="trip-text-date">
                         <h4><img class="mytrips-icon" src="images/icon_clock_green.png" alt="Ikon som föreställer en klocka">Datum och ankomst:</h4>
@@ -187,8 +187,8 @@
                 <div class="trip-buttons">
                     <a class="mytrips-link" href="mytripsHistoryDetails.html">Visa detaljer</a>
                 </div>
-            </div>
-            <div class="trip">
+            </article>
+            <article class="trip">
                 <div class="trip-text">
                     <div class="trip-text-date">
                         <h4><img class="mytrips-icon" src="images/icon_clock_green.png" alt="Ikon som föreställer en klocka">Datum och ankomst:</h4>
@@ -202,8 +202,8 @@
                 <div class="trip-buttons">
                     <a class="mytrips-link" href="mytripsHistoryDetails.html">Visa detaljer</a>
                 </div>
-            </div>
-            <div class="trip">
+            </article>
+            <article class="trip">
                 <div class="trip-text">
                     <div class="trip-text-date">
                         <h4><img class="mytrips-icon" src="images/icon_clock_green.png" alt="Ikon som föreställer en klocka">Datum och ankomst:</h4>
@@ -217,8 +217,8 @@
                 <div class="trip-buttons">
                     <a class="mytrips-link" href="mytripsHistoryDetails.html">Visa detaljer</a>
                 </div>
-            </div>
-            <div class="trip">
+            </article>
+            <article class="trip">
                 <div class="trip-text">
                     <div class="trip-text-date">
                         <h4><img class="mytrips-icon" src="images/icon_clock_green.png" alt="Ikon som föreställer en klocka">Datum och ankomst:</h4>
@@ -232,8 +232,8 @@
                 <div class="trip-buttons">
                     <a class="mytrips-link" href="mytripsHistoryDetails.html">Visa detaljer</a>
                 </div>
-            </div>
-            <div class="trip">
+            </article>
+            <article class="trip">
                 <div class="trip-text">
                     <div class="trip-text-date">
                         <h4><img class="mytrips-icon" src="images/icon_clock_green.png" alt="Ikon som föreställer en klocka">Datum och ankomst:</h4>
@@ -247,9 +247,9 @@
                 <div class="trip-buttons">
                     <a class="mytrips-link" href="mytripsHistoryDetails.html">Visa detaljer</a>
                 </div>
-            </div>  
-        </article>
-    </section>
+            </article>  
+        </section>
+    </main>
     <!--Footer-->
     <footer id="footer">
         <!--Footer top part-->
@@ -271,9 +271,9 @@
                 <a class="footer-a" href="availability.html">Läs om hur vi tänker kring tillgänglighet</a> 
                 <h2 class="footer-heading">Kontakta oss:</h2>
                 <a class="footer-a" href="mailto:mail@mail.se"><img class="footer-icon" src="images/icon_mail_white.png" alt="Ikon som liknar brev">Klicka här för att maila oss</a> 
-                <a class="footer-a" href=""><img class="footer-icon" src="images/icon_phone_white.png" alt="Ikon som liknar en telefon">072-160 66 08</a> 
+                <p class="footer-a"><img class="footer-icon" src="images/icon_phone_white.png" alt="Ikon som liknar en telefon">072-160 66 08</p> 
                 <h2 class="footer-heading">Hittade du det du söker efter?</h2>
-                <form id="search-form" action="search.html">
+                <form id="search-form" role="search" action="search.html">
                     <input class="footer-search" type="search" placeholder="Sök här">
                     <button class="footer-search-button" type="submit"><img class="footer-search-button-img" src="images/icon_searche.png" alt="ikon som visar ett förstoringsglas"></button>
                 </form>

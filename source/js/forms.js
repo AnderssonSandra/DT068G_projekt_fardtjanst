@@ -292,25 +292,25 @@ function updateReturnAid(checked, value) {
 function updateReturnPassengerNumber(value) {
     console.log(value);
     switch(value){
-        case 0:
-            console.log(value);
-            document.getElementById("return-passengers-zero").setAttribute('selected', true);
+        case "0":
+            const noOption = document.getElementById("return-passengers-zero");
+            noOption.selected = true;
         break;
-        case 1:
-            console.log(value);
-            document.getElementById("return-passengers-one").setAttribute('selected', true);
+        case "1":
+            const one = document.getElementById("return-passengers-one");
+            one.selected = true;
         break;
-        case 2:
-            console.log(value);
-            document.getElementById("return-passengers-two").setAttribute('selected', true);
+        case "2":
+            const two = document.getElementById("return-passengers-two");
+            two.selected = true;
         break;
-        case 3:
-            console.log(value);
-            document.getElementById("return-passengers-three").setAttribute('selected', true);
+        case "3":
+            const three = document.getElementById("return-passengers-three");
+            three.selected = true;
         break;
         case "more":
-            console.log(value);
-            document.getElementById("return-passengers-more").setAttribute('selected', true);
+            const more = document.getElementById("return-passengers-more")
+            more.selected = true;
         break;
     }
 }
