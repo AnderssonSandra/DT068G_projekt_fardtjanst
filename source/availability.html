@@ -78,7 +78,7 @@
             <div class="availability-wrapper">
                 <div class="availability-card">
                     <h3>Kontakta oss!</h3>
-                    <p>Vi vill gärna höra dina åsikter om våran webbsida. Hör gärna av dig till oss och ge feedback om hur din upplevelse av webbsidan har varit. Du kan kontakta oss genom att skicka in ett <button data-modal-target="#feedback-popup" class="button-normal-text">forumulär</button>, <a href="mailto:mail@mail.se">maila oss</a>, eller ringa oss på 072-160 66 08.</p>
+                    <p>Vi vill gärna höra dina åsikter om våran webbsida. Hör gärna av dig till oss och ge feedback om hur din upplevelse av webbsidan har varit. Du kan kontakta oss genom att skicka in ett <a href="feedback.html">formulär</a>, <a href="mailto:mail@mail.se">maila oss</a>, eller ringa oss på 072-160 66 08.</p>
                 </div>
                 <div class="availability-card">
                     <h3>Tillsyn</h3>
@@ -90,8 +90,8 @@
             <!--info-div-->
             <div class="info-wrapper" id="info-wrapper">
                 <img src="images/icon_info.png" alt="Ikon som föreställer en rund cirkel med ett i inuti">
-                <div class="hidden-info-text">
-                    <button data-modal-target="#feedback-popup" class="button-normal-text">Klicka på mig för att skicka in dina synpunkter på hur du tror att vi kan förbättra webbsidan för att den ska förstås och kunnas användas av alla!</button>
+                <div class="info-text">
+                    <a href="feedback.html">Klicka på mig för att skicka in dina synpunkter på hur du tror att vi kan förbättra webbsidan för att den ska förstås och kunnas användas av alla!</a>
                 </div>
             </div>
         </article>
@@ -116,8 +116,10 @@
                 <a class="footer-a" href="mailto:mail@mail.se"><img class="footer-icon" src="images/icon_mail_white.png" alt="Ikon som liknar brev">Klicka här för att maila oss</a> 
                 <a class="footer-a" href=""><img class="footer-icon" src="images/icon_phone_white.png" alt="Ikon som liknar en telefon">072-160 66 08</a> 
                 <h2 class="footer-heading">Hittade du det du söker efter?</h2>
-                <img src="images/icon_search_white.png" alt="ikon som visar ett förstoringsglas">
-                <input class="footer-search" type="text" placeholder="Sök här">
+                <form id="search-form" action="search.html">
+                    <input class="footer-search" type="search" placeholder="Sök här">
+                    <button class="footer-search-button" type="submit"><img class="footer-search-button-img" src="images/icon_searche.png" alt="ikon som visar ett förstoringsglas"></button>
+                </form>
             </div>
         </div>
         <div class="footer-bottom">
@@ -125,33 +127,7 @@
             <p>Copywrite 2020  | Färdtjänsthjälpen AB</p>
         </div>
     </footer>
-    <!--overlay for popups-->
-    <div id="overlay"></div>
-    <!--Popup div for show form popup-->
-    <div id="popup-container">
-        <div class="popup" id="feedback-popup">
-            <h2>Skicka in din feedback till oss</h2>
-            <!--info-div-->
-            <div class="info-wrapper">
-                <img src="images/icon_info.png" alt="Ikon som föreställer en rund cirkel med ett i inuti">
-                <div class="info-text">
-                    <p>Alla fält är valfri att fylla i men du måste ange namn och kontaktuppgifter om du vill att vi ska kunna återkoppla till dig angående din feedback.</p>
-                </div>
-            </div>
-            <form id="feedback-form" action="">
-                <label for="feedback-name">Namn:</label><br>
-                <input type="text" id="feedback-name" name="feedback-name" placeholder="Skriv in ditt namn här"><br>
-                <label for="feedback-phone">Hem eller mobilnummer:</label><br>
-                <input type="text" id="feedback-phone" name="feedback-phone" placeholder="Skriv in ditt nummer här"><br>
-                <label for="feedback-email">E-post:</label><br>
-                <input type="text" id="feedback-email" name="feedback-email" placeholder="Skriv in din e-post här"><br>
-                <label for="feedback-feedback">Feedback:</label><br>
-                <textarea rows="10" cols="70" id="feedback-feedback" name="feedback-feedback" placeholder="Skriv in din feedback här"></textarea><br>
-                <input class="submit" id="feedback-submit" type="submit" value="Skicka in feedback">
-            </form>
-            <button data-close-button class="close-button">Vill du inte ge feedback längre? Klicka här</button>
-        </div>
-    </div>
-</body>
-<script src="js/main.js"></script>
+    </body>
+    <script src="js/main.js">
+</script>
 </html>

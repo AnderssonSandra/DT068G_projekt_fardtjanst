@@ -1,8 +1,8 @@
 //hamburger menu logged out 
 function LoggedOutNav() {
-    var x = document.getElementById("menu-list-loggedout");
-    var closeMenu = document.getElementById("close-menu");
-    var openMenu = document.getElementById("open-menu");
+    const x = document.getElementById("menu-list-loggedout");
+    const closeMenu = document.getElementById("close-menu");
+    const openMenu = document.getElementById("open-menu");
     if (x.style.display === "block") {
     x.style.display = "none";
     closeMenu.style.display = "none";
@@ -15,9 +15,9 @@ function LoggedOutNav() {
 }
 
 function LoggedInNav() {
-    var x = document.getElementById("menu-list-loggedin");
-    var closeMenu = document.getElementById("close-menu");
-    var openMenu = document.getElementById("open-menu");
+    const x = document.getElementById("menu-list-loggedin");
+    const closeMenu = document.getElementById("close-menu");
+    const openMenu = document.getElementById("open-menu");
     if (x.style.display === "block") {
     x.style.display = "none";
     closeMenu.style.display = "none";

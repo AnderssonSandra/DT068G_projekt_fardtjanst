@@ -89,8 +89,8 @@
                     </div>
                 </div>
                 <div class="question-right">
-                    <button id="question-yes" onclick="changeBox()"> Ja</button>
-                    <button id="question-no" onclick="changeBox()">Nej</button>
+                    <button id="question-yes" class="question-yes" onclick="changeBox()"> Ja</button>
+                    <button id="question-no" class="question-no" onclick="changeBox()">Nej</button>
                 </div>
             </div>
             <!--info-div-->
@@ -126,8 +126,10 @@
                 <a class="footer-a" href="mailto:mail@mail.se"><img class="footer-icon" src="images/icon_mail_white.png" alt="Ikon som liknar brev">Klicka här för att maila oss</a> 
                 <a class="footer-a" href=""><img class="footer-icon" src="images/icon_phone_white.png" alt="Ikon som liknar en telefon">072-160 66 08</a> 
                 <h2 class="footer-heading">Hittade du det du söker efter?</h2>
-                <img src="images/icon_search_white.png" alt="ikon som visar ett förstoringsglas">
-                <input class="footer-search" type="text" placeholder="Sök här">
+                <form id="search-form" action="search.html">
+                    <input class="footer-search" type="search" placeholder="Sök här">
+                    <button class="footer-search-button" type="submit"><img class="footer-search-button-img" src="images/icon_searche.png" alt="ikon som visar ett förstoringsglas"></button>
+                </form>
             </div>
         </div>
         <!--Footer-bottom part-->
@@ -136,29 +138,7 @@
             <p>Copywrite 2020  | Färdtjänsthjälpen AB</p>
         </div>
     </footer>
-    <!--overlay for popups-->
-    <div id="overlay"></div>
-    <!--Popup div for show register popup-->
-    <div id="popup-container">
-        <div class="popup" id="register-popup">
-            <h2>Registrera konto</h2>
-            <form id="register-form" action="">
-                <label for="register-personId">Personnummer:</label><br>
-                <input type="text" id="register-personId" name="register-personId" value="Skriv in ditt personnummer här"><br>
-                <label for="register-customerId">Kundnummer för färdtjänst:</label><br>
-                <input type="text" id="register-customerId" name="register-customerId" value="Skriv in ditt kundnummer här"><br>
-                <label for="register-phone">Hem eller mobilnummer:</label><br>
-                <input type="text" id="register-phone" name="register-phone" value="Skriv in ditt nummer här"><br>
-                <label for="register-password">Lösenord:</label><br>
-                <input type="text" id="register-password" name="register-password" value="Skriv in ditt lösenord här"><br>
-                <label for="register-confirm-password">Bekräfta lösenord:</label><br>
-                <input type="text" id="register-confirm-password" name="register-confirm-password" value="Bekfräfta lösenord"><br>
-                <input class="submit" id="register-submit" type="submit" value="Registrera konto">
-            </form>
-            <button data-close-button class="close-button">Vill du inte registrera ett konto längre? Klicka här</button>
-        </div>
-    </div>
+    <!--scripts-->
+    <script src="js/main.js"></script>
 </body>
-<!--scripts-->
-<script src="js/main.js"></script>
 </html>

@@ -1,0 +1,143 @@
+#mytrips-container {
+    max-width: 1300px;
+    @include medium-container;
+}
+
+
+.trip {
+    @include standard-container;
+    display: flex;
+    border: 1px solid $dark-green;
+    border-radius: 79px;
+    padding: 2em 4em;
+    background-color: #6e8d8d14;
+    .trip-text {
+        width: 80%;
+        box-sizing: border-box;
+        display: flex;
+        .trip-text-date, .trip-text-destionation {
+            width: 50%;
+        }
+        img {
+            width: 40px;
+            margin-right: 1em;
+        }
+        p {
+            margin-left: 3em;
+        }
+    }
+    .trip-buttons {
+        width: 20%;
+        box-sizing: border-box;
+    }
+}
+
+.mytrips-link {
+    border: 1px solid $dark-green;
+    border-radius: 20px;
+    background-color: $button-gren;
+    color: $white;
+    box-sizing: border-box;
+    font-size: 1.2em;
+    display: block;
+    width: 100%;
+    margin: 0.5em;
+    padding: 0.5em;
+    text-align: center;
+    text-decoration: none;
+}
+
+#mytrips-link-details {
+    margin: 3em 0;
+    padding: 1em;
+}
+
+.changed-trip-p {
+    font-weight: bold;
+    text-align: center;
+    font-size: 1.5em;
+}
+
+#delete-trip {
+    background-color: $no-red;
+}
+
+#update-trip {
+    background-color: $yes-green;
+}
+
+#trip-history-heading, #trip-recurrent-heading {
+    margin-top: 4em;
+}
+
+@media (max-width: 1200px) { 
+    #mytrips-container {
+        width: 90%;
+    }
+    .trip {
+        padding: 2em 3em;
+    }
+}
+
+@media (max-width: 1000px) { 
+    #mytrips-container {
+        width: 98%;
+    }
+    .trip {
+        padding: 2em 2em;
+        margin: auto;
+        .trip-text {
+            width: 85%;
+        }
+        .trip-buttons {
+            width: 15%;
+        }
+    }
+}
+
+@include tablet {
+    .trip {
+        display: block;
+        .trip-text {
+            padding-bottom: 3em;
+            flex-grow: 1;
+            width: 100%;
+            img {
+                width: 35px;
+                margin-right: 0.8em;
+            }
+            p {
+                margin-left: 2.3em;
+            }
+        }
+        .trip-buttons {
+            width: 100%;
+        }
+    }
+    .mytrips-link {
+        width: 100%;
+        margin: 0.7em auto;
+    }
+}
+
+@include phone {
+
+    .trip {
+        display: block;
+        padding: 2em 1.5em;
+        .trip-text {
+            display: block;
+            width: 100%;
+            .trip-text-date, .trip-text-destionation {
+                width: 100%;
+                display: block;
+                padding-bottom: 2em;
+            }
+        }
+    }
+
+    .mytrips-link {
+        width: 100%;
+    }
+
+}

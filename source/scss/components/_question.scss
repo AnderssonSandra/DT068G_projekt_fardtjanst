@@ -30,10 +30,10 @@
             @include button;
             margin: 1.5em 1em;
         }
-        #question-yes {
+        .question-yes {
             background-color: $yes-green;
         }
-        #question-no {
+        .question-no {
             background-color: $no-red;
         }
     }

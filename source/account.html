@@ -36,34 +36,34 @@
         <!--här kommer innehåll-->
         <article class="my-site-container">
             <h2>Mina personliga uppgifter</h2>
-            <form id="personal-info-form" action="">
+            <form id="personal-info-form" action="personalInfoUpdate.html">
                 <label for="personal-info-personId">Personnummer (kan inte uppdatera):</label><br>
-                <input type="text" id="personal-info-personId" name="personal-info-personId" placeholder="Skriv in ditt personnummer här"><br>
+                <input type="text" id="personal-info-personId" name="personal-info-personId" value="19420920-3312" placeholder="Skriv in ditt personnummer här"><br>
                 <label for="personal-info-customerId">Kundnummer för färdtjänst:</label><br>
-                <input type="text" id="personal-info-customerId" name="personal-info-customerId" placeholder="Skriv in ditt kundnummer här"><br>
+                <input type="text" id="personal-info-customerId" name="personal-info-customerId" value="1234567890" placeholder="Skriv in ditt kundnummer här"><br>
                 <label for="personal-info-phone">Telefonnummer:</label><br>
-                <input type="text" id="personal-info-phone" name="personal-info-phone" placeholder="Skriv in din telefonnummer här"><br>
+                <input type="text" id="personal-info-phone" name="personal-info-phone" value="072-123 45 67" placeholder="Skriv in din telefonnummer här"><br>
                 <label for="personal-info-email">E-post:</label><br>
-                <input type="text" id="personal-info-email" name="personal-info-email" placeholder="Skriv in din e-post här"><br>
+                <input type="text" id="personal-info-email" name="personal-info-email" value="agda@email.com" placeholder="Skriv in din e-post här"><br>
                 <label for="personal-info-address">Adress:</label><br>
-                <input type="text" id="personal-info-address" name="personal-info-address" placeholder="Uppdatera adress"><br>
+                <input type="text" id="personal-info-address" name="personal-info-address" value="Drottninggatan 4" placeholder="Uppdatera adress"><br>
                 <label for="personal-info-zip">Postnummer:</label><br>
-                <input type="text" id="personal-info-zip" name="personal-info-zip" placeholder="Uppdatera postnummer"><br>
+                <input type="text" id="personal-info-zip" name="personal-info-zip" value="702 10" placeholder="Uppdatera postnummer"><br>
                 <label for="personal-info-city">Postort:</label><br>
-                <input type="text" id="personal-info-city" name="personal-info-city" placeholder="Uppdatera postort"><br>
+                <input type="text" id="personal-info-city" name="personal-info-city" value="Örebro" placeholder="Uppdatera postort"><br>
+                <input type="submit" class="update-button" value="Uppdatera reseuppgifter">
             </form>
-            <button class="update-button" data-modal-target="#personal-info-update-popup">Uppdatera dina reseuppgifter</button>
         </article>
         <!--div for travel info-->
         <article class="my-site-container">
             <h2>Mina reseuppgifter</h2>
-            <form id="travel-info-form" action="">
+            <form id="travel-info-form" action="travelInfoUpdate.html">
                 <p class="form-p">Bocka i rutorna för den/de funktionsnedsätningarna du har</p>
                 <div class="form-wrapper">
                     <div class="form-card"> 
-                        <input type="checkbox" class="checkbox" id="travel-info-disability-walk" name="travel-info-disability-walk" value="walk">
+                        <input checked type="checkbox" class="checkbox" id="travel-info-disability-walk" name="travel-info-disability-walk" value="walk">
                         <label class="checkbox-label" for="travel-info-disability-walk">Gångsvårigheter</label><br>                
-                        <input type="checkbox" class="checkbox" id="travel-info-disability-eyes" name="travel-info-disability-eyes" value="eyes">
+                        <input checked type="checkbox" class="checkbox" id="travel-info-disability-eyes" name="travel-info-disability-eyes" value="eyes">
                         <label class="checkbox-label" for="travel-info-disability-eyes">Synnedsättning</label><br>
                         <input type="checkbox" class="checkbox" id="travel-info-disability-orientation" name="travel-info-disability-orientation" value="orientation">
                         <label class="checkbox-label" for="travel-info-disability-orientation">Orienteringssvårigheter</label><br>
@@ -88,50 +88,56 @@
                         <label class="checkbox-label" for="travel-info-aid-wheelchair">Rullstol</label><br>
                         <input type="checkbox" class="checkbox" id="travel-info-aid-walker" name="travel-info-aid-walker" value="walker">
                         <label class="checkbox-label" for="travel-info-aid-walker">Rullator</label><br>
-                        <input type="checkbox" class="checkbox" id="travel-info-aid-crutch" name="travel-info-aid-crutch" value="crutch">
+                        <input checked type="checkbox" class="checkbox" id="travel-info-aid-crutch" name="travel-info-aid-crutch" value="crutch">
                         <label class="checkbox-label" for="travel-info-aid-crutch">Käpp/kryckor/stavar</label><br>
                     </div>
                     <div>
-                        <input type="checkbox" class="checkbox" id="travel-info-aid-dog" name="travel-info-aid-dog" value="dog">
-                        <label class="checkbox-label" for="travel-info-aid-permobil">Permobil</label><br>
-                        <input type="checkbox" class="checkbox" id="travel-info-aid-other" name="travel-info-aid-other" value="other">
+                        <input checked type="checkbox" class="checkbox" id="travel-info-aid-dog" name="travel-info-aid-dog" value="dog">
                         <label class="checkbox-label" for="travel-info-aid-dog">Ledsagarhund</label><br>
                         <input type="checkbox" class="checkbox" id="travel-info-aid-permobil" name="travel-info-aid-permobil" value="permobil">
+                        <label class="checkbox-label" for="travel-info-aid-permobil">Permobil</label><br>
+                        <input type="checkbox" class="checkbox" id="travel-info-aid-other" name="travel-info-aid-other" value="other">
                         <label class="checkbox-label" for="travel-info-aid-other">annat</label><br>
                     </div>
                 </div>
                 <p class="form-p">Kan du förflytta dig till annat säte?</p>
                 <input checked type="radio" class="radiobox" id="travel-info-move-in-car-yes" name="travel-info-move-in-car" value="ja">
-                <label for="travel-info-move-in-car" class="yes-label">Ja</label>
+                <label for="travel-info-move-in-car-yes" class="yes-label">Ja</label>
                 <input type="radio" class="radiobox" id="travel-info-move-in-car-no" name="travel-info-move-in-car" value="no">
-                <label for="travel-info-move-in-car" class="no-label">Nej</label><br>
+                <label for="travel-info-move-in-car-no" class="no-label">Nej</label><br>
                 
                 <p class="form-p">Kan du förflytta dig till och från bilen på egen hand?</p>
                 <input checked type="radio" class="radiobox" id="travel-info-move-to-car-yes" name="travel-info-move-to-car" value="ja">
-                <label for="travel-info-move-to-car" class="yes-label">Ja</label>
+                <label for="travel-info-move-to-car-yes" class="yes-label">Ja</label>
                 <input type="radio" class="radiobox" id="travel-info-move-to-car-no" name="travel-info-move-to-car" value="no">
-                <label for="travel-info-move-to-car" class="no-label">Nej</label><br>
+                <label for="travel-info-move-to-car-no" class="no-label">Nej</label><br>
                 
                 <p class="form-p">Har du hiss i din bostad?</p>
                 <input checked type="radio" class="radiobox" id="travel-info-elevator-yes" name="travel-info-elevator" value="ja">
-                <label for="travel-info-elevator" class="yes-label">Ja</label>
+                <label for="travel-info-elevator-yes" class="yes-label">Ja</label>
                 <input type="radio" class="radiobox" id="travel-info-elevator-no" name="travel-info-elevator" value="no">
-                <label for="travel-info-elevator" class="no-label">Nej</label><br>
+                <label for="travel-info-elevator-no" class="no-label">Nej</label><br>
                                                 
                 <p class="form-p">Har du några speciella behov?</p>
-                <input checked type="radio" class="radiobox" id="travel-info-special-needs-yes" name="travel-info-special-needs" value="ja">
-                <label for="travel-info-special-needs" class="yes-label">Ja</label>
-                <input type="radio" class="radiobox" id="travel-info-special-needs-no" name="travel-info-special-needs" value="no">
-                <label for="travel-info-special-needs" class="no-label">Nej</label><br>
+                <input type="radio" class="radiobox" id="travel-info-special-needs-yes" name="travel-info-special-needs" value="ja">
+                <label for="travel-info-special-needs-yes" class="yes-label">Ja</label>
+                <input checked type="radio" class="radiobox" id="travel-info-special-needs-no" name="travel-info-special-needs" value="no">
+                <label for="travel-info-special-needs-no" class="no-label">Nej</label><br>
+            
+                <p class="form-p">Betalar du med månadskort?</p>
+                <input checked type="radio" class="radiobox" id="travel-info-monthcard-yes" name="travel-monthcard-needs" value="ja">
+                <label for="travel-info-monthcard-yes" class="yes-label">Ja</label>
+                <input type="radio" class="radiobox" id="travel-info-monthcard-no" name="travel-monthcard-needs" value="no">
+                <label for="travel-info-monthcard-no" class="no-label">Nej</label><br>
+                <input type="submit" class="update-button" value="Uppdatera reseuppgifter">
             </form>
-            <button class="update-button" data-modal-target="#travel-info-update-popup">Uppdatera dina reseuppgifter</button>
         </article>
         <article class="info-box-container">
             <!--info-div-->
             <div class="info-wrapper" id="info-wrapper">
                 <img src="images/icon_info.png" alt="Ikon som föreställer en rund cirkel med ett i inuti">
-                <div class="hidden-info-text">
-                    <button data-modal-target="#feedback-popup" class="button-normal-text">Klicka på mig för att skicka in dina synpunkter på hur du tror att vi kan förbättra webbsidan för att den ska förstås och kunnas användas av alla!</button>
+                <div class="info-text">
+                    <a href="feedback.html">Klicka på mig för att skicka in dina synpunkter på hur du tror att vi kan förbättra webbsidan för att den ska förstås och kunnas användas av alla!</a>
                 </div>
             </div>
         </article>
@@ -159,8 +165,10 @@
                 <a class="footer-a" href="mailto:mail@mail.se"><img class="footer-icon" src="images/icon_mail_white.png" alt="Ikon som liknar brev">Klicka här för att maila oss</a> 
                 <a class="footer-a" href=""><img class="footer-icon" src="images/icon_phone_white.png" alt="Ikon som liknar en telefon">072-160 66 08</a> 
                 <h2 class="footer-heading">Hittade du det du söker efter?</h2>
-                <img src="images/icon_search_white.png" alt="ikon som visar ett förstoringsglas">
-                <input class="footer-search" type="text" placeholder="Sök här">
+                <form id="search-form" action="search.html">
+                    <input class="footer-search" type="search" placeholder="Sök här">
+                    <button class="footer-search-button" type="submit"><img class="footer-search-button-img" src="images/icon_searche.png" alt="ikon som visar ett förstoringsglas"></button>
+                </form>
             </div>
         </div>
         <!--Footer-bottom part-->
@@ -169,131 +177,7 @@
             <p>Copywrite 2020  | Färdtjänsthjälpen AB</p>
         </div>
     </footer>
-    <!--overlay for popups-->
-    <div id="overlay"></div>
-    <!--Popup div for show personal info update popup-->
-    <div id="popup-container">
-        <div class="popup" id="personal-info-update-popup">
-            <h2>Uppdatera dina uppgifter</h2>
-            <form id="personal-info-update-update-form" action="">
-                <label for="personal-info-update-update-personId">Personnummer (kan inte uppdatera):</label><br>
-                <input type="text" id="personal-info-update-update-personId" name="personal-info-update-update-personId" placeholder="Skriv in ditt personnummer här"><br>
-                <label for="personal-info-update-customerId">Kundnummer för färdtjänst:</label><br>
-                <input type="text" id="personal-info-update-update-customerId" name="personal-info-update-update-customerId" placeholder="Skriv in ditt kundnummer här"><br>
-                <label for="personal-info-update-phone">Telefonnummer:</label><br>
-                <input type="text" id="personal-info-update-phone" name="personal-info-update-phone" placeholder="Skriv in din telefonnummer här"><br>
-                <label for="personal-info-update-email">E-post:</label><br>
-                <input type="text" id="personal-info-update-email" name="personal-info-update-email" placeholder="Skriv in din e-post här"><br>
-                <label for="personal-info-update-address">Adress:</label><br>
-                <input type="text" id="personal-info-update-address" name="personal-info-update-address" placeholder="Uppdatera adress"><br>
-                <label for="personal-info-update-zip">Postnummer:</label><br>
-                <input type="text" id="personal-info-update-zip" name="personal-info-update-zip" placeholder="Uppdatera postnummer"><br>
-                <label for="personal-info-update-city">Postort:</label><br>
-                <input type="text" id="personal-info-update-city" name="personal-info-update-city" placeholder="Uppdatera postort"><br>
-                <input class="submit" id="personal-info-update-submit" type="submit" value="Uppdatera dina uppgifter">
-            </form>
-            <button data-close-button class="close-button">Vill du inte ge uppdatera? Klicka här</button>
-        </div>
-        <!--Popup div for travel info update popup-->
-        <div class="popup" id="travel-info-update-popup">
-            <h2>Uppdatera dina uppgifter</h2>
-            <form id="travel-info-update-form" action="">
-                <p class="form-p">Bocka i rutorna för den/de funktionsnedsätningarna du har</p>
-                <div class="form-wrapper">
-                    <div class="form-card">
-                        <input type="checkbox" class="checkbox" id="travel-info-update-disability-walk" name="travel-info-update-disability-walk" value="walk">
-                        <label class="checkbox-label" for="travel-info-update-disability-walk">Gångsvårigheter</label><br>
-                        <input type="checkbox" class="checkbox" id="travel-info-update-disability-eyes" name="travel-info-update-disability-eyes" value="eyes">
-                        <label class="checkbox-label" for="travel-info-update-disability-eyes">Synnedsättning</label><br>
-                        <input type="checkbox" class="checkbox" id="travel-info-update-disability-orientation" name="travel-info-update-disability-orientation" value="orientation">
-                        <label class="checkbox-label" for="travel-info-update-disability-orientation">Orienteringssvårigheter</label><br>
-                        <input type="checkbox" class="checkbox" id="travel-info-update-disability-dizziness" name="travel-info-update-disability-dizziness" value="dizziness">
-                        <label class="checkbox-label" for="travel-info-update-disability-dizziness">Yrsel</label><br>
-                    </div>
-                    <div class="form-card">
-                        <input type="checkbox" class="checkbox" id="travel-info-update-disability-balance" name="travel-info-update-disability-balance" value="balance">
-                        <label class="checkbox-label" for="travel-info-update-disability-balance">Balanssvårigheter</label><br>
-                        <input type="checkbox" class="checkbox" id="travel-info-update-disability-heart" name="travel-info-update-disability-heart" value="heart">
-                        <label class="checkbox-label" for="travel-info-update-disability-heart">Hjärt - och/eller kärlproblem</label><br>
-                        <input type="checkbox" class="checkbox" id="travel-info-update-disability-mental" name="travel-info-update-disability-mental" value="mental">
-                        <label class="checkbox-label" for="travel-info-update-disability-mental">Psykiska besvär</label><br>
-                        <input type="checkbox" class="checkbox" id="travel-info-update-disability-other" name="travel-info-update-disability-other" value="other">
-                        <label class="checkbox-label" for="travel-info-update-disability-other">Annat</label><br>
-                    </div>
-                </div>
-
-                <p class="form-p">Bocka i rutorna för de hjälpmedel du använder:</p>
-                <div class="form-wrapper">
-                    <div class="form-card">
-                        <input type="checkbox" class="checkbox" id="travel-info-update-aid-wheelchair" name="travel-info-update-aid-wheelchair" value="wheelchair">
-                        <label class="checkbox-label" for="travel-info-update-aid-wheelchair">Rullstol</label><br>
-                        <input type="checkbox" class="checkbox" id="travel-info-update-aid-walker" name="travel-info-update-aid-walker" value="walker">
-                        <label class="checkbox-label" for="travel-info-update-aid-walker">Rullator</label><br>
-                        <input type="checkbox" class="checkbox" id="travel-info-update-aid-crutch" name="travel-info-update-aid-crutch" value="crutch">
-                        <label class="checkbox-label" for="travel-info-update-aid-crutch">Käpp/kryckor/stavar</label><br>
-                    </div>
-                    <div class="form-card">
-                        <input type="checkbox" class="checkbox" id="travel-info-update-aid-permobil" name="travel-info-update-aid-permobil" value="permobil">
-                        <label class="checkbox-label" for="travel-info-update-aid-permobil">Permobil</label><br>
-                        <input type="checkbox" class="checkbox" id="travel-info-update-aid-dog" name="travel-info-update-aid-dog" value="dog">
-                        <label class="checkbox-label" for="travel-info-update-aid-dog">Ledsagarhund</label><br>
-                        <input type="checkbox" class="checkbox" id="travel-info-update-aid-other" name="travel-info-update-aid-other" value="other">
-                        <label class="checkbox-label" for="travel-info-update-aid-other">annat</label><br>
-                    </div>
-                </div>
-                <p class="form-p">Kan du förflytta dig till annat säte?</p>
-                <input checked type="radio" class="radiobox" id="travel-info-update-move-in-car-yes" name="travel-info-update-move-in-car" value="ja">
-                <label for="travel-info-update-move-in-car" class="yes-label">Ja</label>
-                <input type="radio" class="radiobox" id="travel-info-update-move-in-car-no" name="travel-info-update-move-in-car" value="no">
-                <label for="travel-info-update-move-in-car" class="no-label">Nej</label><br>
-                
-                <p class="form-p">Kan du förflytta dig till och från bilen på egen hand?</p>
-                <input checked type="radio" class="radiobox" id="travel-info-update-move-to-car-yes" name="travel-info-update-move-to-car" value="ja">
-                <label for="travel-info-update-move-to-car" class="yes-label">Ja</label>
-                <input type="radio" class="radiobox" id="travel-info-update-move-to-car-no" name="travel-info-update-move-to-car" value="no">
-                <label for="travel-info-update-move-to-car" class="no-label">Nej</label><br>
-                
-                <p class="form-p">Har du hiss i din bostad?</p>
-                <input checked type="radio" class="radiobox" id="travel-info-update-elevator-yes" name="travel-info-update-elevator" value="ja">
-                <label for="travel-info-update-elevator" class="yes-label">Ja</label>
-                <input type="radio" class="radiobox" id="travel-info-update-elevator-no" name="travel-info-update-elevator" value="no">
-                <label for="travel-info-update-elevator" class="no-label">Nej</label><br>
-                                                
-                <p class="form-p">Har du några speciella behov?</p>
-                <input checked type="radio" class="radiobox" id="travel-info-update-special-needs-yes" name="travel-info-update-special-needs" value="ja">
-                <label for="travel-info-update-special-needs" class="yes-label">Ja</label>
-                <input type="radio" class="radiobox" id="travel-info-update-special-needs-no" name="travel-info-update-special-needs" value="no">
-                <label for="travel-info-update-special-needs" class="no-label">Nej</label><br>
-                
-                <input class="submit" id="travel-info-update-submit" type="submit" value="Uppdatera dina uppgifter">
-            </form>
-            <button data-close-button class="close-button">Vill du inte ge uppdatera? Klicka här</button>
-        </div>
-        <!--Popup div for show feedback-form popup-->
-        <div class="popup" id="feedback-popup">
-            <h2>Skicka in din feedback till oss</h2>
-            <!--info-div-->
-            <div class="info-wrapper">
-                <img src="images/icon_info.png" alt="Ikon som föreställer en rund cirkel med ett i inuti">
-                <div class="info-text">
-                    <p>Alla fält är valfri att fylla i men du måste ange namn och kontaktuppgifter om du vill att vi ska kunna återkoppla till dig angående din feedback.</p>
-                </div>
-            </div>
-            <form id="feedback-form" action="">
-                <label for="feedback-name">Namn:</label><br>
-                <input type="text" id="feedback-name" name="feedback-name" placeholder="Skriv in ditt namn här"><br>
-                <label for="feedback-phone">Hem eller mobilnummer:</label><br>
-                <input type="text" id="feedback-phone" name="feedback-phone" placeholder="Skriv in ditt nummer här"><br>
-                <label for="feedback-email">E-post:</label><br>
-                <input type="text" id="feedback-email" name="feedback-email" placeholder="Skriv in din e-post här"><br>
-                <label for="feedback-feedback">Feedback:</label><br>
-                <textarea rows="10" cols="70" id="feedback-feedback" name="feedback-feedback" placeholder="Skriv in din feedback här"></textarea><br>
-                <input class="submit" id="feedback-submit" type="submit" value="Skicka in feedback">
-            </form>
-            <button data-close-button class="close-button">Vill du inte ge feedback längre? Klicka här</button>
-        </div>
-    </div>
+    <!--scripts-->
+    <script src="js/main.js"></script>
 </body>
-<!--scripts-->
-<script src="js/main.js"></script>
 </html>

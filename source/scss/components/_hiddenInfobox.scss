@@ -15,6 +15,9 @@
     .hidden-info-text {
         width: 80%;
         padding: 3em 1em 2em 1em;
+        box-sizing: border-box;
+        margin: auto;
+        text-align: center;
     } 
 }
 
@@ -24,6 +27,8 @@
         padding: 3em;
         img {
             margin-top: 2em;
+            display: block;
+            margin: auto;
             width: 25%;
             max-width: 90px;
         }
@@ -34,23 +39,19 @@
     }
 }
 
-
-
 @include phone {
     .hidden-info-wrapper {
         width: 90%;
-        padding: 0.5em;
-        display: block;
+        padding: 2em;
         img {
-            display: block;
             width: 60%;
             max-width: 300px;
             height: auto;
-            margin: auto;
         }
         .hidden-info-text {
-            padding: 1em 0 0 0;
+            padding: 3em 1em;
             width: 100%;
+            display: block;
         }
     }
 }

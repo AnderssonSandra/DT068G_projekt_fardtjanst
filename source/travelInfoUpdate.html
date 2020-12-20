@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="sv">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Färdtjänsthjälpen</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Inria+Serif&display=swap" rel="stylesheet">
+</head>
+<body>
+    <section class="popup-container">
+        <!--Popup div for travel info update popup-->
+        <article class="update-form-wrapper" id="travel-info-update">
+            <h2>Uppdatera dina uppgifter</h2>
+            <form id="travel-info-update-form" action="confirmedUpdatedInfo.html">
+                <p class="form-p">Bocka i rutorna för den/de funktionsnedsätningarna du har</p>
+                <div class="form-wrapper">
+                    <div class="form-card">
+                        <input checked type="checkbox" class="checkbox" id="travel-info-update-disability-walk" name="travel-info-update-disability-walk" value="walk">
+                        <label class="checkbox-label" for="travel-info-update-disability-walk">Gångsvårigheter</label><br>
+                        <input checked type="checkbox" class="checkbox" id="travel-info-update-disability-eyes" name="travel-info-update-disability-eyes" value="eyes">
+                        <label class="checkbox-label" for="travel-info-update-disability-eyes">Synnedsättning</label><br>
+                        <input type="checkbox" class="checkbox" id="travel-info-update-disability-orientation" name="travel-info-update-disability-orientation" value="orientation">
+                        <label class="checkbox-label" for="travel-info-update-disability-orientation">Orienteringssvårigheter</label><br>
+                        <input type="checkbox" class="checkbox" id="travel-info-update-disability-dizziness" name="travel-info-update-disability-dizziness" value="dizziness">
+                        <label class="checkbox-label" for="travel-info-update-disability-dizziness">Yrsel</label><br>
+                    </div>
+                    <div class="form-card">
+                        <input type="checkbox" class="checkbox" id="travel-info-update-disability-balance" name="travel-info-update-disability-balance" value="balance">
+                        <label class="checkbox-label" for="travel-info-update-disability-balance">Balanssvårigheter</label><br>
+                        <input type="checkbox" class="checkbox" id="travel-info-update-disability-heart" name="travel-info-update-disability-heart" value="heart">
+                        <label class="checkbox-label" for="travel-info-update-disability-heart">Hjärt - och/eller kärlproblem</label><br>
+                        <input type="checkbox" class="checkbox" id="travel-info-update-disability-mental" name="travel-info-update-disability-mental" value="mental">
+                        <label class="checkbox-label" for="travel-info-update-disability-mental">Psykiska besvär</label><br>
+                        <input type="checkbox" class="checkbox" id="travel-info-update-disability-other" name="travel-info-update-disability-other" value="other">
+                        <label class="checkbox-label" for="travel-info-update-disability-other">Annat</label><br>
+                    </div>
+                </div>
+
+                <p class="form-p">Bocka i rutorna för de hjälpmedel du använder:</p>
+                <div class="form-wrapper">
+                    <div class="form-card">
+                        <input type="checkbox" class="checkbox" id="travel-info-update-aid-wheelchair" name="travel-info-update-aid-wheelchair" value="wheelchair">
+                        <label class="checkbox-label" for="travel-info-update-aid-wheelchair">Rullstol</label><br>
+                        <input type="checkbox" class="checkbox" id="travel-info-update-aid-walker" name="travel-info-update-aid-walker" value="walker">
+                        <label class="checkbox-label" for="travel-info-update-aid-walker">Rullator</label><br>
+                        <input checked type="checkbox" class="checkbox" id="travel-info-update-aid-crutch" name="travel-info-update-aid-crutch" value="crutch">
+                        <label class="checkbox-label" for="travel-info-update-aid-crutch">Käpp/kryckor/stavar</label><br>
+                    </div>
+                    <div class="form-card">
+                        <input type="checkbox" class="checkbox" id="travel-info-update-aid-permobil" name="travel-info-update-aid-permobil" value="permobil">
+                        <label class="checkbox-label" for="travel-info-update-aid-permobil">Permobil</label><br>
+                        <input checked type="checkbox" class="checkbox" id="travel-info-update-aid-dog" name="travel-info-update-aid-dog" value="dog">
+                        <label class="checkbox-label" for="travel-info-update-aid-dog">Ledsagarhund</label><br>
+                        <input type="checkbox" class="checkbox" id="travel-info-update-aid-other" name="travel-info-update-aid-other" value="other">
+                        <label class="checkbox-label" for="travel-info-update-aid-other">annat</label><br>
+                    </div>
+                </div>
+                <p class="form-p">Kan du förflytta dig till annat säte?</p>
+                <input checked type="radio" class="radiobox" id="travel-info-update-move-in-car-yes" name="travel-info-update-move-in-car" value="ja">
+                <label for="travel-info-update-move-in-car-yes" class="yes-label">Ja</label>
+                <input type="radio" class="radiobox" id="travel-info-update-move-in-car-no" name="travel-info-update-move-in-car" value="no">
+                <label for="travel-info-update-move-in-car-no" class="no-label">Nej</label><br>
+                
+                <p class="form-p">Kan du förflytta dig till och från bilen på egen hand?</p>
+                <input checked type="radio" class="radiobox" id="travel-info-update-move-to-car-yes" name="travel-info-update-move-to-car" value="ja">
+                <label for="travel-info-update-move-to-car-yes" class="yes-label">Ja</label>
+                <input type="radio" class="radiobox" id="travel-info-update-move-to-car-no" name="travel-info-update-move-to-car" value="no">
+                <label for="travel-info-update-move-to-car-no" class="no-label">Nej</label><br>
+                
+                <p class="form-p">Har du hiss i din bostad?</p>
+                <input checked type="radio" class="radiobox" id="travel-info-update-elevator-yes" name="travel-info-update-elevator" value="ja">
+                <label for="travel-info-update-elevator-yes" class="yes-label">Ja</label>
+                <input type="radio" class="radiobox" id="travel-info-update-elevator-no" name="travel-info-update-elevator" value="no">
+                <label for="travel-info-update-elevator-no" class="no-label">Nej</label><br>
+                                                
+                <p class="form-p">Har du några speciella behov?</p>
+                <input type="radio" class="radiobox" id="travel-info-update-special-needs-yes" name="travel-info-update-special-needs" value="ja">
+                <label for="travel-info-update-special-needs-yes" class="yes-label">Ja</label>
+                <input checked type="radio" class="radiobox" id="travel-info-update-special-needs-no" name="travel-info-update-special-needs" value="no">
+                <label for="travel-info-update-special-needs-no" class="no-label">Nej</label><br>
+                
+                <p class="form-p">Betalar du med månadskort?</p>
+                <input checked type="radio" class="radiobox" id="travel-info-update-monthcard-yes" name="travel-update-monthcard-needs" value="ja">
+                <label for="travel-info-update-monthcard-yes" class="yes-label">Ja</label>
+                <input type="radio" class="radiobox" id="travel-info-update-monthcard-no" name="travel-update-monthcard-needs" value="no">
+                <label for="travel-info-update-monthcard-no" class="no-label">Nej</label><br>
+                <input class="submit" id="travel-info-update-submit" type="submit" value="Uppdatera dina uppgifter">
+            </form>
+            <a class="go-back-link" href="javascript:history.back()">Vill du inte uppdatera längre? Klicka här för att gå tillbaka</a>
+        </article>
+    </section>
+    <!--scripts-->
+    <script src="js/main.js"></script>    
+</body>
+</html>

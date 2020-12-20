@@ -36,109 +36,109 @@
         <!--här kommer innehåll-->
         <article class="book-trip-container">
             <h2>Boka tur och retur</h2>
-            <form id="book-exit-trip-form" action="">
+            <form id="form" action="confirmReturnTrip.html">
                 <!--to destination-->
                 <h3>Utresa</h3>
-                <label for="book-exit-trip-from">Från:</label><br>
-                <input type="text" id="book-exit-trip-from" name="book-exit-trip-from" placeholder="Skriv i upphämtningsplats"><br>
+                <label for="from">Från:</label><br>
+                <input type="text" id="from" name="from" placeholder="Skriv i upphämtningsplats" onchange="updateReturnTo(this.value)"><br>
                 
-                <label for="book-exit-trip-to">Till:</label><br>
-                <input type="text" id="book-exit-trip-to" name="book-exit-trip-to" placeholder="Skriv i slutdestination"><br>
+                <label for="to">Till:</label><br>
+                <input type="text" id="to" name="to" placeholder="Skriv i slutdestination" onchange="updateReturnFrom(this.value)"><br>
                 
-                <label for="book-exit-trip-date">Vilket datum vill du åka?</label>
-                <input type="date" id="book-exit-trip-date" name="book-exit-trip-date">
+                <label for="date">Vilket datum vill du åka?</label>
+                <input type="date" id="date" name="date">
 
-                <label for="book-exit-trip-time">Ange tid du vill vara framme:</label>
-                <input type="time" id="book-exit-trip-time" name="book-exit-trip-time">
-                
-                <p class="form-p">Bocka i rutorna om fler ska med på resan</p>
-                <input type="checkbox" class="checkbox" id="book-exit-trip-traveler" name="book-exit-trip-traveler" value="traveler">
-                <label class="checkbox-label" for="book-exit-trip-traveler">Medresenär</label><br>
-                <input type="checkbox" class="checkbox" id="book-exit-trip-companion" name="book-exit-trip-companion" value="companion">
-                <label class="checkbox-label" for="book-exit-trip-companion">Ledsagare</label><br>
-                <input type="checkbox" class="checkbox" id="book-exit-trip-kids" name="book-exit-trip-kids" value="kids">
-                <label class="checkbox-label" for="book-exit-trip-kids">Barn</label><br>
+                <label for="time">Ange tid du vill vara framme:</label>
+                <input type="time" id="time" min="05:30" max="00:00" name="time" onchange="checkTime(this.value);">
+                <div id="time-error-container">
+                    <!--add errormessage if time is wrong-->
+                </div>
 
-                <label class="special-label" for="book-exit-trip-passengers">Hur många reser du med?</label><br>
-                <select name="book-exit-trip-passengers" id="cars">
-                    <option value="0">Jag reser själv</option>
-                    <option value="1">1 person</option>
-                    <option value="2">2 personer</option>
-                    <option value="3">3 personer</option>
-                    <option value="more">mer än 3 personer</option>
-                </select>
+                <p>Bocka i rutorna om fler ska med på resan</p>
+                <input type="checkbox" class="checkbox" id="traveler" name="traveler" value="traveler" onclick="addPassenger();updateReturnPassenger(this.checked, this.value);">
+                <label class="checkbox-label" for="traveler">Medresenär</label><br>
+                <input type="checkbox" class="checkbox" id="companion" name="companion" value="companion" onclick="addPassenger();updateReturnPassenger(this.checked, this.value);">
+                <label class="checkbox-label" for="companion">Ledsagare</label><br>
+                <input type="checkbox" class="checkbox" id="kids" name="kids" value="kids" onclick="addPassenger();updateReturnPassenger(this.checked, this.value);">
+                <label class="checkbox-label" for="kids">Barn</label><br>
+                <div id="passengers-container">
+                    <!--add questions depended on choise of passengers-->
+                </div>
                     
                 <p class="form-p">Bocka i rutorna för de hjälpmedel du använder:</p>
                 <div class="form-wrapper">
                     <div class="form-card">
-                        <input type="checkbox" class="checkbox" id="book-exit-trip-aid-wheelchair" name="book-exit-trip-aid-wheelchair" value="wheelchair">
-                        <label class="checkbox-label" for="book-exit-trip-aid-wheelchair">Rullstol</label><br>
-                        <input type="checkbox" class="checkbox" id="book-exit-trip-aid-walker" name="book-exit-trip-aid-walker" value="walker">
-                        <label class="checkbox-label" for="book-exit-trip-aid-walker">Rullator</label><br>
-                        <input type="checkbox" class="checkbox" id="book-exit-trip-aid-crutch" name="book-exit-trip-aid-crutch" value="crutch">
-                        <label class="checkbox-label" for="book-exit-trip-aid-crutch">Käpp/kryckor/stavar</label><br>
+                        <input type="checkbox" class="checkbox" id="aid-wheelchair" name="aid-wheelchair" value="wheelchair" onclick="addAidQuestion();updateReturnAid(this.checked, this.value);">
+                        <label class="checkbox-label" for="aid-wheelchair">Rullstol</label><br>
+                        <input type="checkbox" class="checkbox" id="aid-walker" name="aid-walker" value="walker" onclick="addAidQuestion();updateReturnAid(this.checked, this.value);">
+                        <label class="checkbox-label" for="aid-walker">Rullator</label><br>
+                        <input checked type="checkbox" class="checkbox" id="aid-crutch" name="aid-crutch" value="crutch" onclick="updateReturnAid(this.checked, this.value);">
+                        <label class="checkbox-label" for="aid-crutch">Käpp/kryckor/stavar</label><br>
                     </div>
                     <div>
-                        <input type="checkbox" class="checkbox" id="book-exit-trip-aid-dog" name="book-exit-trip-aid-dog" value="dog">
-                        <label class="checkbox-label" for="book-exit-trip-aid-permobil">Permobil</label><br>
-                        <input type="checkbox" class="checkbox" id="book-exit-trip-aid-other" name="book-exit-trip-aid-other" value="other">
-                        <label class="checkbox-label" for="book-exit-trip-aid-dog">Ledsagarhund</label><br>
-                        <input type="checkbox" class="checkbox" id="book-exit-trip-aid-permobil" name="book-exit-trip-aid-permobil" value="permobil">
-                        <label class="checkbox-label" for="book-exit-trip-aid-other">annat</label><br>
+                        <input checked type="checkbox" class="checkbox" id="aid-dog" name="aid-dog" value="dog" onclick="updateReturnAid(this.checked, this.value);">
+                        <label class="checkbox-label" for="aid-dog">Ledsagarhund</label><br>
+                        <input type="checkbox" class="checkbox" id="aid-permobil" name="aid-permobil" value="permobil" onclick="addAidQuestion();updateReturnAid(this.checked, this.value);">
+                        <label class="checkbox-label" for="aid-permobil">Permobil</label><br>
+                        <input type="checkbox" class="checkbox" id="aid-other" name="aid-other" value="other" onclick="updateReturnAid(this.checked, this.value);">
+                        <label class="checkbox-label" for="aid-other">annat</label><br>
                     </div>
+                </div>
+                <div id="add-aid-container">
+                    <!--add questions depended on choise of aid-->
                 </div>
                 <!--back home-->
                 <h3 id="form-heading" >Hemresa</h3>
-                <label for="book-home-trip-from">Från:</label><br>
-                <input type="text" id="book-home-trip-from" name="book-home-trip-from" placeholder="Skriv i upphämtningsplats"><br>
+                <label for="return-from">Från:</label><br>
+                <input type="text" id="return-from" name="return-from" placeholder="Skriv i upphämtningsplats"><br>
                 
-                <label for="book-home-trip-to">Till:</label><br>
-                <input type="text" id="book-home-trip-to" name="book-home-trip-to" placeholder="Skriv i slutdestination"><br>
+                <label for="return-to">Till:</label><br>
+                <input type="text" id="return-to" name="return-to" placeholder="Skriv i slutdestination"><br>
                 
-                <label for="book-home-trip-date">Vilket datum vill du åka?</label>
-                <input type="date" id="book-home-trip-date" name="book-home-trip-date">
+                <label for="return-date">Vilket datum vill du åka?</label>
+                <input type="date" id="return-date" name="return-date">
 
-                <label for="book-home-trip-time">Ange tid du vill vara tillbaka:</label>
-                <input type="time" id="book-home-trip-time" name="book-home-trip-time">
+                <label for="return-time">Ange tid du vill vara tillbaka:</label>
+                <input type="time" id="return-time" name="return-time" onchange="checkReturnTime(this.value);">
+                <div id="return-time-error-container">
+                    <!--add errormessage if time is wrong-->
+                </div>
                 
-                <p class="form-p">Bocka i rutorna om fler ska med på resan</p>
-                <input type="checkbox" class="checkbox" id="book-home-trip-traveler" name="book-home-trip-traveler" value="traveler">
-                <label class="checkbox-label" for="book-home-trip-traveler">Medresenär</label><br>
-                <input type="checkbox" class="checkbox" id="book-home-trip-companion" name="book-home-trip-companion" value="companion">
-                <label class="checkbox-label" for="book-home-trip-companion">Ledsagare</label><br>
-                <input type="checkbox" class="checkbox" id="book-home-trip-kids" name="book-home-trip-kids" value="kids">
-                <label class="checkbox-label" for="book-home-trip-kids">Barn</label><br>
-
-                <label class="special-label" for="book-home-trip-passengers">Hur många reser du med?</label><br>
-                <select name="book-home-trip-passengers" id="book-home-trip-passengers">
-                    <option value="0">Jag reser själv</option>
-                    <option value="1">1 person</option>
-                    <option value="2">2 personer</option>
-                    <option value="3">3 personer</option>
-                    <option value="more">mer än 3 personer</option>
-                </select>
+                <p>Bocka i rutorna om fler ska med på resan</p>
+                <input type="checkbox" class="checkbox" id="return-traveler" name="return-traveler" value="traveler" onclick="addReturnPassenger()">
+                <label class="checkbox-label" for="return-traveler">Medresenär</label><br>
+                <input type="checkbox" class="checkbox" id="return-companion" name="return-companion" value="companion" onclick="addReturnPassenger()">
+                <label class="checkbox-label" for="return-companion">Ledsagare</label><br>
+                <input type="checkbox" class="checkbox" id="return-kids" name="return-kids" value="kids" onclick="addReturnPassenger()">
+                <label class="checkbox-label" for="return-kids">Barn</label><br>
+                <div id="return-passengers-container">
+                    <!--add questions depended on choise of passengers-->
+                </div>
                     
                 <p class="form-p">Bocka i rutorna för de hjälpmedel du använder:</p>
                 <div class="form-wrapper">
                     <div class="form-card">
-                        <input type="checkbox" class="checkbox" id="book-home-trip-aid-wheelchair" name="book-home-trip-aid-wheelchair" value="wheelchair">
-                        <label class="checkbox-label" for="book-home-trip-aid-wheelchair">Rullstol</label><br>
-                        <input type="checkbox" class="checkbox" id="book-home-trip-aid-walker" name="book-home-trip-aid-walker" value="walker">
-                        <label class="checkbox-label" for="book-home-trip-aid-walker">Rullator</label><br>
-                        <input type="checkbox" class="checkbox" id="book-home-trip-aid-crutch" name="book-home-trip-aid-crutch" value="crutch">
-                        <label class="checkbox-label" for="book-home-trip-aid-crutch">Käpp/kryckor/stavar</label><br>
+                        <input type="checkbox" class="checkbox" id="return-aid-wheelchair" name="return-aid-wheelchair" value="wheelchair" onclick="addReturnAidQuestion()">
+                        <label class="checkbox-label" for="return-aid-wheelchair">Rullstol</label><br>
+                        <input type="checkbox" class="checkbox" id="return-aid-walker" name="return-aid-walker" value="walker" onclick="addReturnAidQuestion()">
+                        <label class="checkbox-label" for="return-aid-walker">Rullator</label><br>
+                        <input type="checkbox" class="checkbox" id="return-aid-crutch" name="return-aid-crutch" value="crutch">
+                        <label class="checkbox-label" for="return-aid-crutch">Käpp/kryckor/stavar</label><br>
                     </div>
                     <div>
-                        <input type="checkbox" class="checkbox" id="book-home-trip-aid-dog" name="book-home-trip-aid-dog" value="dog">
-                        <label class="checkbox-label" for="book-home-trip-aid-permobil">Permobil</label><br>
-                        <input type="checkbox" class="checkbox" id="book-home-trip-aid-other" name="book-home-trip-aid-other" value="other">
-                        <label class="checkbox-label" for="book-home-trip-aid-dog">Ledsagarhund</label><br>
-                        <input type="checkbox" class="checkbox" id="book-home-trip-aid-permobil" name="book-home-trip-aid-permobil" value="permobil">
-                        <label class="checkbox-label" for="book-home-trip-aid-other">annat</label><br>
+                        <input type="checkbox" class="checkbox" id="return-aid-dog" name="return-aid-dog" value="dog">
+                        <label class="checkbox-label" for="return-aid-dog">Ledsagarhund</label><br>
+                        <input type="checkbox" class="checkbox" id="return-aid-permobil" name="return-aid-permobil" value="permobil" onclick="addReturnAidQuestion()">
+                        <label class="checkbox-label" for="return-aid-permobil">Permobil</label><br>
+                        <input type="checkbox" class="checkbox" id="return-aid-other" name="return-aid-other" value="other">
+                        <label class="checkbox-label" for="return-aid-other">annat</label><br>
                     </div>
                 </div>
+                <div id="return-add-aid-container">
+                    <!--add questions depended on choise of aid-->
+                </div>
+                <input type="submit" class="update-button" value="Boka Resa">
             </form>
-            <button class="update-button" data-modal-target="#confirm-return-trip-popup">Boka resa</button>
         </article>
     </section>
     <!--Footer-->
@@ -164,8 +164,10 @@
                 <a class="footer-a" href="mailto:mail@mail.se"><img class="footer-icon" src="images/icon_mail_white.png" alt="Ikon som liknar brev">Klicka här för att maila oss</a> 
                 <a class="footer-a" href=""><img class="footer-icon" src="images/icon_phone_white.png" alt="Ikon som liknar en telefon">072-160 66 08</a> 
                 <h2 class="footer-heading">Hittade du det du söker efter?</h2>
-                <img src="images/icon_search_white.png" alt="ikon som visar ett förstoringsglas">
-                <input class="footer-search" type="text" placeholder="Sök här">
+                <form id="search-form" action="search.html">
+                    <input class="footer-search" type="search" placeholder="Sök här">
+                    <button class="footer-search-button" type="submit"><img class="footer-search-button-img" src="images/icon_searche.png" alt="ikon som visar ett förstoringsglas"></button>
+                </form>
             </div>
         </div>
         <!--Footer-bottom part-->
@@ -174,84 +176,7 @@
             <p>Copywrite 2020  | Färdtjänsthjälpen AB</p>
         </div>
     </footer>
-    <!--overlay for popups-->
-    <div id="overlay"></div>
-    <div id="popup-container">
-        <!--popup to confirm popup-->
-        <div class="popup" id="confirm-return-trip-popup">
-            <h2>Stämmer dina uppgifter?</h2>
-            <p  class="dubblecheck-intro-text">Vänligen dubbelkolla att dina uppgifter stämmer och bekräfta sedan resan för att boka.</p>          
-            <!--exit trip-->
-            <h3>Utresa</h3>
-            <p class="dubbelcheck-p"><img src="images/icon_location.png" alt="Ikon som föreställer en destination"><b>Från:</b> Adress</p>
-            <p class="dubbelcheck-p"><img src="images/icon_location.png" alt="Ikon som föreställer en destination"><b>Till:</b> Adress</p>
-            <p class="dubbelcheck-p"><img src="images/icon_calender.png" alt="Ikon som föreställer en kalender"><b>Datum:</b> 20 december 2020</p>
-            <p class="dubbelcheck-p"><img src="images/icon_clock_green.png" alt="Ikon som föreställer en klocka"><b>Tid:</b> Du vill vara framme kl.17</p>
-            <p class="dubbelcheck-p"><img src="images/icon-user.png" alt="Ikon som föreställer en gubbe"><b>Resenärer:</b> Du åker själv</p>
-            <p class="dubbelcheck-p"><img src="images/icon_info.png" alt="Ikon som föreställer en cirkel med ett i i"><b>Hjälpmedel:</b></p>
-            <ul>
-                <li>Rullstol</li>
-                <li>Ledsagarhund</li>
-            </ul>
-            <p class="dubbelcheck-under-text">Du kan förflytta dig till eget säte</p>
-            <p class="dubbelcheck-p"><img src="images/icon_todo.png" alt="Ikon som föreställer en lista"><b>Dina uppgifter:</b></p>
-            <ul>
-                <li>Du klarar av att ta dig till och från bilen själv</li>
-                <li>Du betalar med månadskort</li>
-                <li>Du har inga speciella behov</li>
-            </ul>
-            <!--home trip-->
-            <h3>Hemresa</h3>
-            <p class="dubbelcheck-p"><img src="images/icon_location.png" alt="Ikon som föreställer en destination"><b>Från:</b> Adress</p>
-            <p class="dubbelcheck-p"><img src="images/icon_location.png" alt="Ikon som föreställer en destination"><b>Till:</b> Adress</p>
-            <p class="dubbelcheck-p"><img src="images/icon_calender.png" alt="Ikon som föreställer en kalender"><b>Datum:</b> 20 december 2020</p>
-            <p class="dubbelcheck-p"><img src="images/icon_clock_green.png" alt="Ikon som föreställer en klocka"><b>Tid:</b> Du vill vara framme kl.17</p>
-            <p class="dubbelcheck-p"><img src="images/icon-user.png" alt="Ikon som föreställer en gubbe"><b>Resenärer:</b> Du åker själv</p>
-            <p class="dubbelcheck-p"><img src="images/icon_info.png" alt="Ikon som föreställer en cirkel med ett i i"><b>Hjälpmedel:</b></p>
-            <ul>
-                <li>Rullstol</li>
-                <li>Ledsagarhund</li>
-            </ul>
-            <p class="dubbelcheck-under-text">Du kan förflytta dig till eget säte</p>
-            <p class="dubbelcheck-p"><img src="images/icon_todo.png" alt="Ikon som föreställer en lista"><b>Dina uppgifter:</b></p>
-            <ul>
-                <li>Du klarar av att ta dig till och från bilen själv</li>
-                <li>Du betalar med månadskort</li>
-                <li>Du har inga speciella behov</li>
-            </ul>
-            <button class="update-button" data-modal-target="#confirmed-trip-popup">Boka resa</button>
-            <button data-close-button class="close-button">Blev något fel? Klicka här för att gå tillbaka till bokningen</button>
-        </div>
-        <!--popup when booking is confirmed-->
-        <div class="popup" id="confirmed-trip-popup">
-            <h2>Din resa är bokad</h2>
-            <p class="dubblecheck-intro-text">Du har nu bokat din resa!</p>
-            <a class="choose-booking-link" href="mytrips.html">Se dina bokade resor</a>
-            <a class="choose-booking-link" href="book.html">Boka en ny resa</a>
-            <!--question-div-->
-            <div class="question-wrapper" id="question-wrapper">
-                <div class="question-left">
-                    <img src="images/icon_question.png" alt="Ikon som föreställer en rund cirkel med ett frågetecken i">
-                    <div class="question-left-text">
-                        <p>Hade du en bra upplevelse när du bokade resan?</p>
-                    </div>
-                </div>
-                <div class="question-right">
-                    <button id="question-yes" onclick="changeBox()"> Ja</button>
-                    <button id="question-no" onclick="changeBox()">Nej</button>
-                </div>
-            </div>
-            <!--info-div-->
-            <div class="hidden-info-wrapper" id="hidden-info-wrapper">
-                <img src="images/icon_info.png" alt="Ikon som föreställer en rund cirkel med ett i inuti">
-                <div class="hidden-info-text">
-                    <p>Tack för din feedback!</p>
-                    <a href="availability.html">Gå gärna in och läs om vårat arbete kring tillgänglighet här</a>
-                </div>
-            </div>        
-        </div>
-    </div>
+    <!--scripts-->
+    <script src="js/main.js"></script>
 </body>
-<!--scripts-->
-<script src="js/main.js"></script>
 </html>

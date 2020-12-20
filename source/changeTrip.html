@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="sv">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Färdtjänsthjälpen</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Inria+Serif&display=swap" rel="stylesheet">
+</head>
+<body>
+    <section class="popup-container">
+        <h2>Ändra din resa</h2>
+        <article class="change-trip">
+            <form id="form" action="">
+                <label for="from">Från:</label><br>
+                <input type="text" id="from" name="from" value="Drottninggatan 4"><br>
+                
+                <label for="to">Till:</label><br>
+                <input type="text" id="to" name="to" value="Kungsgatan 31"><br>
+                
+                <label for="date">Vilket datum vill du åka?</label>
+                <input type="date" id="date" name="date" value="2020-12-25">
+
+                <label for="time">Ange tid du vill vara framme:</label>
+                <input type="time" id="time" min="05:30" max="00:00" value="10:00" name="time" onchange="checkTime(this.value);">
+                <div id="time-error-container">
+                    <!--add errormessage if time is wrong-->
+                </div>
+                
+                <p class="form-p">Bocka i rutorna om fler ska med på resan</p>
+                <input checked type="checkbox" class="checkbox" id="traveler" name="traveler" value="traveler">
+                <label class="checkbox-label" for="traveler">Medresenär</label><br>
+                <input type="checkbox" class="checkbox" id="companion" name="companion" value="companion">
+                <label class="checkbox-label" for="companion">Ledsagare</label><br>
+                <input type="checkbox" class="checkbox" id="kids" name="kids" value="kids">
+                <label class="checkbox-label" for="kids">Barn</label><br>
+               
+                <label class="special-label" for="return-passengers">Hur många reser du med?</label><br>
+                <select name="return-passengers" id="return-passengers">
+                    <option id="return-passengers-zero" value="0">Välj hur många personer</option>
+                    <option selected id="return-passengers-one" value="1">1 person</option>
+                    <option id="return-passengers-two" value="2">2 personer</option>
+                    <option id="return-passengers-three" value="3">3 personer</option>
+                    <option id="return-passengers-more" value="more">mer än 3 personer</option>
+                </select>
+                    
+                <p class="form-p">Bocka i rutorna för de hjälpmedel du använder:</p>
+                <div class="form-wrapper">
+                    <div class="form-card">
+                        <input type="checkbox" class="checkbox" id="aid-wheelchair" name="aid-wheelchair" value="wheelchair" onclick="addAidQuestion()">
+                        <label class="checkbox-label" for="aid-wheelchair">Rullstol</label><br>
+                        <input type="checkbox" class="checkbox" id="aid-walker" name="aid-walker" value="walker" onclick="addAidQuestion()">
+                        <label class="checkbox-label" for="aid-walker">Rullator</label><br>
+                        <input checked type="checkbox" class="checkbox" id="aid-crutch" name="aid-crutch" value="crutch">
+                        <label class="checkbox-label" for="aid-crutch">Käpp/kryckor/stavar</label><br>
+                    </div>
+                    <div>
+                        <input checked type="checkbox" class="checkbox" id="aid-dog" name="aid-dog" value="dog">
+                        <label class="checkbox-label" for="aid-dog">Ledsagarhund</label><br>
+                        <input type="checkbox" class="checkbox" id="aid-permobil" name="aid-permobil" value="permobil" onclick="addAidQuestion()">
+                        <label class="checkbox-label" for="aid-permobil">Permobil</label><br>
+                        <input type="checkbox" class="checkbox" id="aid-other" name="aid-other" value="other">
+                        <label class="checkbox-label" for="aid-other">annat</label><br>
+                    </div>
+                </div>
+                <div id="add-aid-container">
+                    <!--add questions depended on choise of aid-->
+                </div>
+            </form>
+            <a href="confirmupdate.html" class="update-button" id="update-trip">Uppdatera resa</a>
+            <a href="confirmDelete.html" class="update-button" id="delete-trip">Avboka resan</a>
+            <a class="go-back-link" href="javascript:history.back()">Vill du inte ändra din resa? Klicka här för att gå tillbaka</a>
+        </article>
+    </section>    
+    <!--scripts-->
+    <script src="js/main.js"></script>
+</body>
+</html>

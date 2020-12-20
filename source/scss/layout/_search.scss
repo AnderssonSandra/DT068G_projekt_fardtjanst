@@ -1,0 +1,101 @@
+#search-container {
+    width: 80%;
+    margin: auto;
+}
+.search-div {
+    width: 100%;
+    box-sizing: border-box;
+    padding: 3em 2em;
+    border-bottom: 1px solid $dark-green;
+}
+
+#search-wrapper {
+    width: 100%;
+}
+
+.search-link {
+    font-size: 1.6em;
+    color: $dark-green;
+    font-weight: bold;
+}
+
+#search-intro-text {
+    padding: 2em 0 2em 2em;
+}
+
+
+/*<form id="search-form" action="search.html">
+    <input id="search-input" type="search" placeholder="Sök här">
+    <button id="search-button" type="submit"><img class="search-button-img" src="images/icon_searche.png" alt="ikon som visar ett förstoringsglas"> Sök </button>
+</form>*/
+
+#search {
+    @include standard-container;
+    display: flex;
+    #search-input {
+        width: 70%;
+        box-sizing: border-box;
+    }
+
+    #search-button {
+        width: 30%;
+        margin: 0.5em 0 0 0.5em;
+        max-height: 76px;
+        box-sizing: border-box;
+        background-color: $info-box-green;
+        font-family: $text;
+        font-size: 1.2em;
+        border-radius: 25px;
+        #search-button-img {
+            width: 30px;
+        }
+    }
+}
+
+@include tablet {
+    #search-container {
+        width: 90%;
+    }
+
+    .search-div {
+        padding: 2em 0;
+    }
+
+    .search-link {
+        font-size: 1.4em;
+    }
+
+    #search-intro-text {
+        padding: 1em 0;
+    }
+
+}
+
+@include phone {
+    #search-container {
+        width: 100%;
+    }
+
+    .search-link {
+        font-size: 1.2em;
+    }
+
+    #search {
+        display: block;
+        #search-input {
+            width: 100%;
+            margin: 0.5em 0;
+        }
+    
+        #search-button {
+            width: 100%;
+            margin: 0.5em 0;
+            font-size: 1.1em;
+            padding: 0.7em;
+            #search-button-img {
+                width: 20px;
+            }
+        }
+    }
+
+}

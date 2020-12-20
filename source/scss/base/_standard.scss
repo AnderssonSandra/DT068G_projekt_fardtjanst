@@ -6,3 +6,82 @@
     @include standard-container;
     margin: 8em 0;
 }
+
+.popup-container {
+    @include standard-container;
+    max-width: 1200px;
+    margin: auto;
+    border-radius: 50px
+}
+
+.go-back-link {
+    display: block;
+    text-align: center;
+    margin: 3em 0;
+    font-size: 1.3em;
+    &:hover {
+        font-weight: bold;
+    }
+}
+
+.details {
+    padding: 1em 3em;
+    width: 88%;
+    margin: auto;
+    background-color: $info-box-green;
+    border-radius: 25px;
+    box-sizing: border-box;
+    ul {
+        list-style-type: disc;
+        padding-left: 9em;
+        li {
+            padding-bottom: 1em;
+        }
+    }
+}
+
+@include tablet {
+    .popup-container {
+        border-radius: 0;
+        padding: 2em;
+    }
+
+    .details {
+        ul {
+            padding-left: 5em;
+        }
+    }
+
+    #thanks-for-feedback {
+        padding: 1em;
+    }
+}
+
+@include phone {
+    .login-container {
+        padding: 0 1em;
+    }
+    .info-box-container {
+        margin: 4em 0;
+    }
+
+    .popup-container {
+        padding: 0;
+    }
+
+    .my-site-container {
+        padding: 1em;
+    }
+
+    .details {
+        width: 98%;
+        padding: 1.5em;
+        ul {
+            padding-left: 1.5em;
+        }
+    }
+
+    .go-back-link {
+        font-size: 1.1em;
+    }
+}

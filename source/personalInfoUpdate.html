@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="sv">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Färdtjänsthjälpen</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Inria+Serif&display=swap" rel="stylesheet">
+</head>
+<body>
+    <section class="popup-container">
+        <article class="update-form-wrapper" id="personal-info-update">
+            <h2>Uppdatera dina uppgifter</h2>
+            <form id="personal-info-update-form" action="confirmedUpdatedInfo.html">
+                <label for="personal-info-update-personId">Personnummer (kan inte uppdatera):</label><br>
+                <input type="text" id="personal-info-update-personId" value="19420920-3312" name="personal-info-update-personId" placeholder="Skriv in ditt personnummer här"><br>
+                <label for="personal-info-update-customerId">Kundnummer för färdtjänst:</label><br>
+                <input type="text" id="personal-info-update-customerId" value="1234567890" name="personal-info-update-customerId" placeholder="Skriv in ditt kundnummer här"><br>
+                <label for="personal-info-update-phone">Telefonnummer:</label><br>
+                <input type="text" id="personal-info-update-phone" name="personal-info-update-phone" value="072-123 45 67" placeholder="Skriv in din telefonnummer här"><br>
+                <label for="personal-info-update-email">E-post:</label><br>
+                <input type="text" id="personal-info-update-email" name="personal-info-update-email" value="agda@email.com" placeholder="Skriv in din e-post här"><br>
+                <label for="personal-info-update-address">Adress:</label><br>
+                <input type="text" id="personal-info-update-address" name="personal-info-update-address" value="Drottninggatan 4" placeholder="Uppdatera adress"><br>
+                <label for="personal-info-update-zip">Postnummer:</label><br>
+                <input type="text" id="personal-info-update-zip" name="personal-info-update-zip" value="702 10" placeholder="Uppdatera postnummer"><br>
+                <label for="personal-info-update-city">Postort:</label><br>
+                <input type="text" id="personal-info-update-city" name="personal-info-update-city" value="Örebro" placeholder="Uppdatera postort"><br>
+                <input class="submit" id="personal-info-update-submit" type="submit" value="Uppdatera dina uppgifter">
+            </form>
+            <a class="go-back-link" href="javascript:history.back()">Vill du inte uppdatera längre? Klicka här för att gå tillbaka</a>
+        </article>
+    </section>
+    <!--scripts-->
+    <script src="js/main.js"></script>    
+</body>
+</html>

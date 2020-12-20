@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="sv">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Färdtjänsthjälpen</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Inria+Serif&display=swap" rel="stylesheet">
+</head>
+<body>
+    <section class="popup-container">
+        <!--page to confirm update details-->
+        <article class="mytrips-confirm" id="confirm-update-trip">
+            <!--question-div-->
+            <div class="question-wrapper" id="update-question-wrapper">
+                <div class="question-left">
+                    <img src="images/icon_question.png" alt="Ikon som föreställer en rund cirkel med ett frågetecken i">
+                    <div class="question-left-text">
+                        <p>Är du säker att du vill uppdatera resan?</p>
+                    </div>
+                </div>
+                <div class="question-right">
+                    <button id="question-yes" class="question-yes" onclick="changeUpdateBox()"> Ja</button>
+                    <button id="question-no" class="question-no" onclick="goBack()">Nej</button>
+                </div>
+            </div>
+            <!--info-div-->
+            <div class="hidden-info-wrapper" id="update-hidden-info-wrapper">
+                <div class="hidden-info-text">
+                    <p class="changed-trip-p">Din resa är uppdaterad!</p>
+                    <a href="mytrips.html">Gå tillbaka till dina resor</a>    
+                </div>
+            </div>        
+        </article>
+    </section>
+    <!--scripts-->
+    <script src="js/main.js"></script>
+</body>
+</html>

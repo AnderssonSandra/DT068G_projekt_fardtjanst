@@ -34,7 +34,7 @@
         .info-text {
             display: block;
             margin: auto;
-            padding: 3em 1em 0 1em;
+            padding: 2em 3em;
             width: 100%;
         }
     }
@@ -49,6 +49,9 @@
         img {
             width: 40%;
             height: auto;
+        }
+        .info-text {
+            padding: 1em 0.5em 1em 0.5em;
         }
     }
 }

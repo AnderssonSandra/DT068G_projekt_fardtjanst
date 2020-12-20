@@ -34,7 +34,221 @@
     <!--Content-->
     <section class="container">
         <!--här kommer innehåll-->
+        <article id="mytrips-search-container">
+            <h2>Mina resor</h2>
+        </article>
+        <article id="mytrips-container">
+            <h3>Sortera resor</h3>
+            <form action="#trip-recurrent-heading">
+                <label for="date">Sortera resor på datum:</label>
+                <input type="date" id="date">
+                <label for="destination">Sök på resa efter destination:</label>
+                <input type="search" id="destination">
+                <p>Sortera resor på kategori:</p>
+                <select name="typeOfTrip" id="typeOfTrip" onchange="redirectTo(this.value)">
+                    <option value="0">Välj alternativ</option>
+                    <option value="comming">Kommande resor</option>
+                    <option value="recurrent">Återkommande resor</option>
+                    <option value="history">Resehistorik</option>
+                </select>
+            </form>
+            <h3 id="trips">Kommande resor</h3>
+            <div class="trip">
+                <div class="trip-text">
+                    <div class="trip-text-date">
+                        <h4><img class="mytrips-icon" src="images/icon_clock_green.png" alt="Ikon som föreställer en klocka">Datum och ankomst:</h4>
+                        <p>25/12/2020, kl.10.00</p>
+                    </div>
+                    <div class="trip-text-destination">
+                        <h4><img class="mytrips-icon" src="images/icon_location_green.png" alt="Ikon som föreställer en destination">Destination:</h4>
+                        <p>Drottninggatan 4</p>
+                    </div>
+                </div>
+                <div class="trip-buttons">
+                    <a class="mytrips-link" href="mytripsDetails.html">Visa detaljer</a>
+                    <a class="mytrips-link" href="changeTrip.html">Ändra resa</a>
+                </div>
+            </div>
+            <div class="trip">
+                <div class="trip-text">
+                    <div class="trip-text-date">
+                        <h4><img class="mytrips-icon" src="images/icon_clock_green.png" alt="Ikon som föreställer en klocka">Datum och ankomst:</h4>
+                        <p>28/12/2020, kl.18.30</p>
+                    </div>
+                    <div class="trip-text-destination">
+                        <h4><img class="mytrips-icon" src="images/icon_location_green.png" alt="Ikon som föreställer en destination">Destination:</h4>
+                        <p>Karlsgatan 24</p>
+                    </div>
+                </div>
+                <div class="trip-buttons">
+                    <a class="mytrips-link" href="mytripsDetails.html">Visa detaljer</a>
+                    <a class="mytrips-link" href="changeTrip.html">Ändra resa</a>
+                </div>
+            </div>
+            <div class="trip">
+                <div class="trip-text">
+                    <div class="trip-text-date">
+                        <h4><img class="mytrips-icon" src="images/icon_clock_green.png" alt="Ikon som föreställer en klocka">Datum och ankomst:</h4>
+                        <p>31/12/2020, kl.18.30</p>
+                    </div>
+                    <div class="trip-text-destination">
+                        <h4><img class="mytrips-icon" src="images/icon_location_green.png" alt="Ikon som föreställer en destination">Destination:</h4>
+                        <p>Storgatan 23 4</p>
+                    </div>
+                </div>
+                <div class="trip-buttons">
+                    <a class="mytrips-link" href="mytripsDetails.html">Visa detaljer</a>
+                    <a class="mytrips-link" href="changeTrip.html">Ändra resa</a>
+                </div>
+            </div>
+            <div class="trip">
+                <div class="trip-text">
+                    <div class="trip-text-date">
+                        <h4><img class="mytrips-icon" src="images/icon_clock_green.png" alt="Ikon som föreställer en klocka">Datum och ankomst:</h4>
+                        <p>12/12/2020, kl.11.00</p>
+                    </div>
+                    <div class="trip-text-destination">
+                        <h4><img class="mytrips-icon" src="images/icon_location_green.png" alt="Ikon som föreställer en destination">Destination:</h4>
+                        <p>Drottninggatan 4</p>
+                    </div>
+                </div>
+                <div class="trip-buttons">
+                    <a class="mytrips-link" href="mytripsDetails.html">Visa detaljer</a>
+                    <a class="mytrips-link" href="changeTrip.html">Ändra resa</a>
+                </div>
+            </div>
+            <div class="trip">
+                <div class="trip-text">
+                    <div class="trip-text-date">
+                        <h4><img class="mytrips-icon" src="images/icon_clock_green.png" alt="Ikon som föreställer en klocka">Datum och ankomst:</h4>
+                        <p>12/01/2021, kl.11.30</p>
+                    </div>
+                    <div class="trip-text-destination">
+                        <h4><img class="mytrips-icon" src="images/icon_location_green.png" alt="Ikon som föreställer en destination">Destination:</h4>
+                        <p>Kungsgatan 4</p>
+                    </div>
+                </div>
+                <div class="trip-buttons">
+                    <a class="mytrips-link" href="mytripsDetails.html">Visa detaljer</a>
+                    <a class="mytrips-link" href="changeTrip.html">Ändra resa</a>
+                </div>
+            </div>
+            <div class="trip">
+                <div class="trip-text">
+                    <div class="trip-text-date">
+                        <h4><img class="mytrips-icon" src="images/icon_clock_green.png" alt="Ikon som föreställer en klocka">Datum och ankomst:</h4>
+                        <p>12/01/2020, kl.14.30</p>
+                    </div>
+                    <div class="trip-text-destination">
+                        <h4><img class="mytrips-icon" src="images/icon_location_green.png" alt="Ikon som föreställer en destination">Destination:</h4>
+                        <p>Restalundsvägen 4</p>
+                    </div>
+                </div>
+                <div class="trip-buttons">
+                    <a class="mytrips-link" href="mytripsDetails.html">Visa detaljer</a>
+                    <a class="mytrips-link" href="changeTrip.html">Ändra resa</a>
+                </div>
+            </div>
 
+            <!--recurrent-->
+            <h3 id="trip-recurrent-heading">Åtekommande resor</h3>
+            <div class="trip">
+                <div class="trip-text">
+                    <div class="trip-text-date">
+                        <h4><img class="mytrips-icon" src="images/icon_clock_green.png" alt="Ikon som föreställer en klocka">Datum och ankomst:</h4>
+                        <p> <b>Från:</b> 25/12/2020</p>
+                        <p><b>Till:</b> 25/12/2020</p>
+                        <p><b>Tid:</b> kl.07.30</p>
+                    </div>
+                    <div class="trip-text-destination">
+                        <h4><img class="mytrips-icon" src="images/icon_location_green.png" alt="Ikon som föreställer en destination">Destination:</h4>
+                        <p>Drottninggatan 4</p>
+                    </div>
+                </div>
+                <div class="trip-buttons">
+                    <a class="mytrips-link" href="mytripsRecurrentDetail.html">Visa detaljer</a>
+                    <a class="mytrips-link" href="changeRecurrentTrip.html">Ändra resa</a>
+                </div>
+            </div>
+
+            <!--history-->
+            <h3 id="trip-history-heading">Resehistorik</h3>
+            <div class="trip">
+                <div class="trip-text">
+                    <div class="trip-text-date">
+                        <h4><img class="mytrips-icon" src="images/icon_clock_green.png" alt="Ikon som föreställer en klocka">Datum och ankomst:</h4>
+                        <p>12/12/2020, kl.11.00</p>
+                    </div>
+                    <div class="trip-text-destination">
+                        <h4><img class="mytrips-icon" src="images/icon_location_green.png" alt="Ikon som föreställer en destination">Destination:</h4>
+                        <p>Kungsgatan 2 4</p>
+                    </div>
+                </div>
+                <div class="trip-buttons">
+                    <a class="mytrips-link" href="mytripsHistoryDetails.html">Visa detaljer</a>
+                </div>
+            </div>
+            <div class="trip">
+                <div class="trip-text">
+                    <div class="trip-text-date">
+                        <h4><img class="mytrips-icon" src="images/icon_clock_green.png" alt="Ikon som föreställer en klocka">Datum och ankomst:</h4>
+                        <p>01/12/2020, kl.21.00</p>
+                    </div>
+                    <div class="trip-text-destination">
+                        <h4><img class="mytrips-icon" src="images/icon_location_green.png" alt="Ikon som föreställer en destination">Destination:</h4>
+                        <p>Restalundsvägen 4</p>
+                    </div>
+                </div>
+                <div class="trip-buttons">
+                    <a class="mytrips-link" href="mytripsHistoryDetails.html">Visa detaljer</a>
+                </div>
+            </div>
+            <div class="trip">
+                <div class="trip-text">
+                    <div class="trip-text-date">
+                        <h4><img class="mytrips-icon" src="images/icon_clock_green.png" alt="Ikon som föreställer en klocka">Datum och ankomst:</h4>
+                        <p>11/11/2020, kl.20.00</p>
+                    </div>
+                    <div class="trip-text-destination">
+                        <h4><img class="mytrips-icon" src="images/icon_location_green.png" alt="Ikon som föreställer en destination">Destination:</h4>
+                        <p>Ekersgatan 24</p>
+                    </div>
+                </div>
+                <div class="trip-buttons">
+                    <a class="mytrips-link" href="mytripsHistoryDetails.html">Visa detaljer</a>
+                </div>
+            </div>
+            <div class="trip">
+                <div class="trip-text">
+                    <div class="trip-text-date">
+                        <h4><img class="mytrips-icon" src="images/icon_clock_green.png" alt="Ikon som föreställer en klocka">Datum och ankomst:</h4>
+                        <p>19/10/2020, kl.11.00</p>
+                    </div>
+                    <div class="trip-text-destination">
+                        <h4><img class="mytrips-icon" src="images/icon_location_green.png" alt="Ikon som föreställer en destination">Destination:</h4>
+                        <p>Norrgatan 24</p>
+                    </div>
+                </div>
+                <div class="trip-buttons">
+                    <a class="mytrips-link" href="mytripsHistoryDetails.html">Visa detaljer</a>
+                </div>
+            </div>
+            <div class="trip">
+                <div class="trip-text">
+                    <div class="trip-text-date">
+                        <h4><img class="mytrips-icon" src="images/icon_clock_green.png" alt="Ikon som föreställer en klocka">Datum och ankomst:</h4>
+                        <p>12/09/2020, kl.07.00</p>
+                    </div>
+                    <div class="trip-text-destination">
+                        <h4><img class="mytrips-icon" src="images/icon_location_green.png" alt="Ikon som föreställer en destination">Destination:</h4>
+                        <p>Markgatan 24</p>
+                    </div>
+                </div>
+                <div class="trip-buttons">
+                    <a class="mytrips-link" href="mytripsHistoryDetails.html">Visa detaljer</a>
+                </div>
+            </div>  
+        </article>
     </section>
     <!--Footer-->
     <footer id="footer">
@@ -59,8 +273,10 @@
                 <a class="footer-a" href="mailto:mail@mail.se"><img class="footer-icon" src="images/icon_mail_white.png" alt="Ikon som liknar brev">Klicka här för att maila oss</a> 
                 <a class="footer-a" href=""><img class="footer-icon" src="images/icon_phone_white.png" alt="Ikon som liknar en telefon">072-160 66 08</a> 
                 <h2 class="footer-heading">Hittade du det du söker efter?</h2>
-                <img src="images/icon_search_white.png" alt="ikon som visar ett förstoringsglas">
-                <input class="footer-search" type="text" placeholder="Sök här">
+                <form id="search-form" action="search.html">
+                    <input class="footer-search" type="search" placeholder="Sök här">
+                    <button class="footer-search-button" type="submit"><img class="footer-search-button-img" src="images/icon_searche.png" alt="ikon som visar ett förstoringsglas"></button>
+                </form>
             </div>
         </div>
         <!--Footer-bottom part-->
@@ -69,9 +285,7 @@
             <p>Copywrite 2020  | Färdtjänsthjälpen AB</p>
         </div>
     </footer>
-    <!--overlay for popups-->
-    <div id="overlay"></div>
+    <!--scripts-->
+    <script src="js/main.js"></script>
 </body>
-<!--scripts-->
-<script src="js/main.js"></script>
 </html>

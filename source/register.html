@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="sv">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Färdtjänsthjälpen</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Inria+Serif&display=swap" rel="stylesheet">
+</head>
+<body>
+    <section class="popup-container">
+        <article id="register-wrapper">
+            <h2>Registrera konto</h2>
+            <form id="register-form" action="registerdone.html">
+                <label for="register-personId">Personnummer:</label><br>
+                <input type="text" id="register-personId" name="register-personId" placeholder="Skriv in ditt personnummer här"><br>
+                <label for="register-customerId">Kundnummer för färdtjänst:</label><br>
+                <input type="text" id="register-customerId" name="register-customerId" placeholder="Skriv in ditt kundnummer här"><br>
+                <label for="register-phone">Hem eller mobilnummer:</label><br>
+                <input type="text" id="register-phone" name="register-phone" placeholder="Skriv in ditt nummer här"><br>
+                <label for="register-password">Lösenord:</label><br>
+                <input type="text" id="register-password" name="register-password" placeholder="Skriv in ditt lösenord här"><br>
+                <label for="register-confirm-password">Bekräfta lösenord:</label><br>
+                <input type="text" id="register-confirm-password" name="register-confirm-password" placeholder="Bekfräfta lösenord"><br>
+                <input class="submit" id="register-submit" type="submit" value="Registrera konto">
+            </form>
+            <a class="go-back-link" href="javascript:history.back()">Vill du inte registrera ett konto längre? Klicka här för att gå tillbaka</a>
+        </article>
+    </section>
+    <!--scripts-->
+    <script src="js/main.js"></script>
+</body>
+</html>

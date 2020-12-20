@@ -7,14 +7,13 @@
 //container for choose booking sites
 .choose-booking-container {
     @include standard-container;
-    margin: 5em 0 7em 0;
 }
 
 .choose-booking-link {
     @include button;
     text-decoration: none;
     text-align: center;
-    margin: 1em auto 1em;
+    margin: 3em auto 0;
     width: 60%;
     max-width: 500px;
 }
@@ -24,16 +23,19 @@
 }
 
 @include tablet {
-    .choose-booking-container {
-        margin: 4em 0 5em 0;
-    }
     .choose-booking-link {
         width: 50%;
+        margin: 2em auto 0;
     }
 }
 
 @include phone {
     .choose-booking-link {
         width: 80%;
+        margin: 1.5em auto 0;
+    }
+
+    .book-trip-container {
+        padding: 0 1em;
     }
 }
